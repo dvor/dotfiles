@@ -1,0 +1,9 @@
+[user]
+	name = Dmitriy Vorobjov
+	email = dvor5525@gmail.com
+[core]
+	editor = vim -f
+[color]
+	ui = auto
+[credential]
+	helper = cache --timeout=3600
