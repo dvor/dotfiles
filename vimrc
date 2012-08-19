@@ -65,4 +65,7 @@ set autoread
 " Line numbers
 set number
 
+" Folding
+set foldmethod=syntax
+set foldnestmax=1
 
