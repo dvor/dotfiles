@@ -69,3 +69,5 @@ set number
 set foldmethod=syntax
 set foldnestmax=1
 
+" Allow the cursor to go to "invalid" places
+set virtualedit=all
