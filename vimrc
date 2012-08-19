@@ -29,7 +29,8 @@ set hidden
 
 " Make the 'cw' and like commands put a $ at the end instead of just deleting
 " the text and replacing it
-set cpoptions=ces$
+" !! with snipMate it is causing error on start
+" set cpoptions=ces$
 
 " Set the status line the way i like it
 set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
