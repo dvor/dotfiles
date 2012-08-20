@@ -19,9 +19,6 @@ set autoindent
 " Colorscheme
 colo 256-grayvim
 
-" Make command line two lines high
-" set ch=2
-
 set t_Co=256
 " Make sure that unsaved buffers that are to be put in the background are
 " allowed to go in there (ie. the "must save first" error doesn't come up)
@@ -32,8 +29,12 @@ set hidden
 " !! with snipMate it is causing error on start
 " set cpoptions=ces$
 
-" Set the status line the way i like it
-set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%v\ Buf:#%n\ [%b][0x%B]
+" Set the status line format
+set stl =%{getcwd()}/  " current directory
+set stl+=%f\  " filename
+set stl+=%m\ %r\  " modified and readonly flags
+set stl+=Buf:#%n\  " buffer number
+set stl+=%=Col:%v\ Line:%l/%L[%p%%]\  " position in file
 
 " tell VIM to always put a status line in, even if there is only one window
 set laststatus=2
@@ -57,6 +58,9 @@ set hlsearch
 " Incrementally match the search
 set incsearch
 
+" Case insensitive search
+set ignorecase
+
 " Add the unnamed register to the clipboard
 set clipboard+=unnamed
 
@@ -72,3 +76,24 @@ set foldnestmax=1
 
 " Allow the cursor to go to "invalid" places
 set virtualedit=all
+
+
+
+" ------------------------------------------------------------------------------
+" Mappings
+" ------------------------------------------------------------------------------
+
+" The default leader is '\', but many people prefer ','
+let mapleader=','
+
+
+" Easier moving in windows
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+
+" Clearing highlighted search
+nmap <silent> <leader>/ :nohlsearch<CR>
+
+
