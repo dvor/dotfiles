@@ -4,7 +4,9 @@
 call pathogen#infect()
 
 " russian language is broken on mac, so use english instead
-language en_US
+if has("mac")
+    language en_US
+endif
 
 " Set filetype stuff to on
 filetype on
