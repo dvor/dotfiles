@@ -16,14 +16,19 @@
         " is requered by FuzzyFinder
         Bundle 'L9'
         Bundle 'FuzzyFinder'
+        Bundle 'Rip-Rip/clang_complete'
+        Bundle 'msanders/cocoa.vim'
+        Bundle 'Townk/vim-autoclose'
+        Bundle 'jeetsukumaran/vim-buffergator'
         Bundle 'git://github.com/ervandew/supertab.git'
         Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
-        Bundle 'git://github.com/vim-scripts/UltiSnips.git'
         Bundle 'git://github.com/mileszs/ack.vim.git'
         Bundle 'git://github.com/scrooloose/nerdcommenter.git'
         Bundle 'git://github.com/sjl/threesome.vim.git'
-    " JSON
-        Bundle 'git://github.com/leshill/vim-json.git'
+        Bundle 'kien/ctrlp.vim'
+        "Bundle 'msanders/snipmate.vim'
+        Bundle 'AutoComplPop'
+        Bundle 'Lokaltog/vim-powerline'
 
     filetype plugin indent on     " required!
     " Brief help
@@ -49,20 +54,23 @@ filetype indent on
 
 if has("gui_running")
     " Colorscheme and font
-    colo navajo-night
+    colo moria
     set guifont=Menlo\ Regular:h16
 
     " guioptions
     set go=acg
 else
     " Colorscheme
-    colo 256-grayvim
+    colo trivial256
 endif
 
 set t_Co=256
 
 " Make the command-line completion better
 set wildmenu
+
+" Switch on syntax highlighting
+ syntax on
 
 " Automatically read a file that has changes on disk
 set autoread
@@ -94,12 +102,12 @@ set autoread
                             " (except at the start or end of the file or when long lines wrap).
 
     set showtabline=1       " показывать вкладки табов только когда их больше одной
-    set list                " display unprintable characters
+    "set list                " display unprintable characters
     set wrap                " включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
-        set colorcolumn=140 " подсвечиваем 140 столбец
+        set colorcolumn=95 " подсвечиваем 95 столбец
     end
-    set textwidth=140
+    set textwidth=95
     set formatoptions-=o    " dont continue comments when pushing o/o
     set linebreak           " перенос не разрывая слов
     set autoindent          " копирует отступ от предыдущей строки
@@ -115,7 +123,7 @@ set autoread
     set guicursor=          " отключаем мигание курсора
     set splitbelow          " новый сплит будет ниже текущего :sp
     set splitright          " новый сплит будет правее текущего :vsp
-    set shortmess+=i        " не показывать intro screen
+    set shortmess+=I        " не показывать intro screen
     set mouseshape=s:udsizing,m:no " turn to a sizing arrow over the status lines
     set mousehide " hide the mouse when typing text
 
@@ -168,7 +176,7 @@ set autoread
         set statusline+=%{&fileencoding}
         set statusline+=\ \ %y               " type of file
         set statusline+=\ %3.3(%c%)          " column number
-        set statusline+=\ \ %3.9(%l/%l%)     " line / total lines
+        set statusline+=\ \ %3.9(%l/%L%)     " line / total lines
         "set statusline+=\ \ %2.3p%%          " percentage through file in lines
         set statusline+=\ \ %{FileSize()}
         set statusline+=%<                   " where truncate if line too long
@@ -176,16 +184,22 @@ set autoread
 
 
     " не показывать парную скобку
-        let loaded_matchparen=1 " перестает прыгать на парную скобку, показывая где она. +100 к скорости
+        "let loaded_matchparen=1 " перестает прыгать на парную скобку, показывая где она. +100 к скорости
 
 
 
-" search
+    " search
     set incsearch   " при поиске перескакивать на найденный текст в процессе набора строки
     set hlsearch    " включаем подсветку выражения, которое ищется в тексте
     set ignorecase  " игнорировать регистр букв при поиске
     set smartcase   " override the 'ignorecase' if the search pattern contains upper case characters
 
+
+    " If you prefer the Omni-Completion tip window to close when a selection is
+    " made, these lines close it on movement in insert mode or when leaving
+    " insert mode
+    autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+    autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 
 
@@ -195,6 +209,9 @@ set autoread
 
     " FuzzyFinder
     map <leader>f :FufFile<CR>
+
+
+    map <leader>m :ListMethods<CR>
 
     " <esc><esc>
         " clear the search highlight in normal mode
@@ -267,7 +284,7 @@ set autoread
 
     " ,v
         " Pressing ,v opens the .vimrc in a new tab
-        nmap <leader>v :tabedit $MYVIMRC<CR>
+        nmap <leader>v :edit $MYVIMRC<CR>
 
     " <Space> = <PageDown> Как в браузерах
         nmap <Space> <PageDown>
@@ -315,15 +332,6 @@ set autoread
         nmap <Leader><up>    :leftabove  new<CR>
         nmap <Leader><down>  :rightbelow new<CR>
 
-    " ,bl show buffers
-        nmap <Leader>bl :ls<cr>:b
-
-    " ,bp prev buffer
-        nmap <Leader>bp :bp<cr>
-
-    " ,bn next buffer
-        nmap <Leader>bn :bn<cr>
-
     " Ctrl+s
         map <C-s> <esc>:w<CR>
         imap <C-s> <esc>:w<CR>
@@ -336,6 +344,11 @@ set autoread
 
     " Ремапим русские символы
         set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+
+
+    " reformat json code
+    map <Leader>j :%!python -m json.tool<CR>
+
 
 
 " Environment
@@ -362,11 +375,11 @@ set autoread
         endif
 
     " Auto change the directory to the current file I'm working on
-        autocmd BufEnter * lcd %:p:h
+        "autocmd BufEnter * lcd %:p:h
 
     " Актуально только для MacVim
         " Save on losing focus
-            autocmd FocusLost * :wa
+            "autocmd FocusLost * :wa
 
         " Resize splits when the window is resized
             au VimResized * exe "normal! \<c-w>="
@@ -379,3 +392,12 @@ set autoread
         let g:UltiSnipsJumpForwardTrigger="<tab>"
         let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
         
+
+
+" clang complete stuff
+let g:clang_complete_auto = 1
+
+"not strictly necessary
+set omnifunc=ClangComplete
+
+let g:clang_user_options='clang -cc1 -triple i386-apple-macosx10.6.7 -target-cpu yonah -target-linker-version 128.2 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/3.1 -fblocks -x objective-c -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -D __IPHONE_OS_VERSION_MIN_REQUIRED=50100 || exit 0'
