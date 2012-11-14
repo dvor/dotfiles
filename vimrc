@@ -27,7 +27,7 @@
         Bundle 'git://github.com/sjl/threesome.vim.git'
         Bundle 'kien/ctrlp.vim'
         "Bundle 'msanders/snipmate.vim'
-        Bundle 'AutoComplPop'
+        "Bundle 'AutoComplPop'
         Bundle 'Lokaltog/vim-powerline'
 
     filetype plugin indent on     " required!
