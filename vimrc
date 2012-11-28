@@ -26,7 +26,7 @@
         Bundle 'git://github.com/scrooloose/nerdcommenter.git'
         Bundle 'git://github.com/sjl/threesome.vim.git'
         Bundle 'kien/ctrlp.vim'
-        "Bundle 'msanders/snipmate.vim'
+        Bundle 'msanders/snipmate.vim'
         "Bundle 'AutoComplPop'
         Bundle 'Lokaltog/vim-powerline'
 
@@ -53,16 +53,13 @@ filetype indent on
 " Interface
 
 if has("gui_running")
-    " Colorscheme and font
-    colo moria
     set guifont=Menlo\ Regular:h16
-
     " guioptions
     set go=acg
 else
-    " Colorscheme
-    colo trivial256
 endif
+
+colo solarized
 
 set t_Co=256
 
