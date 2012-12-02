@@ -205,10 +205,10 @@ set autoread
     let mapleader = "," " мапим <leader> на запятую. по умолчанию <leader> это обратный слэш \
 
     " FuzzyFinder
-    map <leader>f :FufFile<CR>
+    noremap <leader>f :FufFile<CR>
 
 
-    map <leader>m :ListMethods<CR>
+    noremap <leader>m :ListMethods<CR>
 
     " <esc><esc>
         " clear the search highlight in normal mode
@@ -247,12 +247,12 @@ set autoread
             echo "Show no line numbers"
           endif
         endfunction
-        map <Leader>nm :call ToogleRelativeNumber()<cr>
+        noremap <Leader>nm :call ToogleRelativeNumber()<cr>
 
     " ,g
         " Fast grep
         " грепает в текущей директории по слову, на котором стоит курсор
-        map <Leader>g :execute "Ack " . expand("<cword>") <Bar> cw<CR>
+        noremap <Leader>g :execute "Ack " . expand("<cword>") <Bar> cw<CR>
 
     " Y янкает от курсора и до конца строки. На манер страндартных D и С.
         nnoremap Y y$
@@ -268,32 +268,32 @@ set autoread
         noremap <Left> <NOP>
         noremap <Right> <NOP>
         " Позволяем передвигаться с помощью hjkl в Insert mode зажав <Ctrl>
-        imap <C-h> <C-o>h
-        imap <C-j> <C-o>j
-        imap <C-k> <C-o>k
-        imap <C-l> <C-o>l
+        inoremap <C-h> <C-o>h
+        inoremap <C-j> <C-o>j
+        inoremap <C-k> <C-o>k
+        inoremap <C-l> <C-o>l
 
     " Переключение по сплитам
-        nmap <C-h> <C-W>h
-        nmap <C-j> <C-W>j
-        nmap <C-k> <C-W>k
-        nmap <C-l> <C-W>l
+        nnoremap <C-h> <C-W>h
+        nnoremap <C-j> <C-W>j
+        nnoremap <C-k> <C-W>k
+        nnoremap <C-l> <C-W>l
 
     " ,v
         " Pressing ,v opens the .vimrc in a new tab
-        nmap <leader>v :edit $MYVIMRC<CR>
+        nnoremap <leader>v :vsplit $MYVIMRC<CR>
 
     " <Space> = <PageDown> Как в браузерах
-        nmap <Space> <PageDown>
+        nnoremap <Space> <PageDown>
 
     " n и N
         " когда бегаем по результатам поиска, то пусть они всегда будут в центре
-        nmap n nzz
-        nmap N Nzz
-        nmap * *zz
-        nmap # #zz
-        nmap g* g*zz
-        nmap g# g#zz
+        nnoremap n nzz
+        nnoremap N Nzz
+        nnoremap * *zz
+        nnoremap # #zz
+        nnoremap g* g*zz
+        nnoremap g# g#zz
 
     " K to split
         " Basically this splits the current line into two new ones at the cursor position,
@@ -324,14 +324,10 @@ set autoread
         noremap k gk
 
     " Создаем пустой сплит относительно текущего
-        nmap <Leader><left>  :leftabove  vnew<CR>
-        nmap <Leader><right> :rightbelow vnew<CR>
-        nmap <Leader><up>    :leftabove  new<CR>
-        nmap <Leader><down>  :rightbelow new<CR>
-
-    " Ctrl+s
-        map <C-s> <esc>:w<CR>
-        imap <C-s> <esc>:w<CR>
+        nnoremap <Leader><left>  :leftabove  vnew<CR>
+        nnoremap <Leader><right> :rightbelow vnew<CR>
+        nnoremap <Leader><up>    :leftabove  new<CR>
+        nnoremap <Leader><down>  :rightbelow new<CR>
 
     " {<CR>
         " auto complete {} indent and position the cursor in the middle line
@@ -344,7 +340,7 @@ set autoread
 
 
     " reformat json code
-    map <Leader>j :%!python -m json.tool<CR>
+    noremap <Leader>j :%!python -m json.tool<CR>
 
 
 
@@ -381,6 +377,9 @@ set autoread
         " Resize splits when the window is resized
             au VimResized * exe "normal! \<c-w>="
 
+" convert current word to uppercase
+inoremap <C-u> <esc>viwUea
+nnoremap <C-u> viwUe
 
 
 " Плагины

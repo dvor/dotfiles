@@ -1,0 +1,11 @@
+nnoremap s :open<Space>google<Space>
+nnoremap S :tabopen<Space>google<Space>
+
+nnoremap <C-l> gt
+nnoremap <C-h> gT
+
+" <esc><esc>
+" clear the search highlight in normal mode
+nnoremap <silent> <esc><esc> :nohlsearch<cr><esc>
+
+
