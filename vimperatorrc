@@ -8,4 +8,5 @@ nnoremap <C-h> gT
 " clear the search highlight in normal mode
 nnoremap <silent> <esc><esc> :nohlsearch<cr><esc>
 
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
 
