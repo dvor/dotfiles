@@ -24,7 +24,6 @@
         Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
         Bundle 'git://github.com/mileszs/ack.vim.git'
         Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-        Bundle 'git://github.com/sjl/threesome.vim.git'
         Bundle 'kien/ctrlp.vim'
         Bundle 'msanders/snipmate.vim'
         "Bundle 'AutoComplPop'
@@ -330,8 +329,8 @@ set autoread
         nmap <Leader><down>  :rightbelow new<CR>
 
     " Ctrl+s
-        map <C-s> <esc>:w<CR>
-        imap <C-s> <esc>:w<CR>
+        "map <C-s> <esc>:w<CR>
+        "imap <C-s> <esc>:w<CR>
 
     " {<CR>
         " auto complete {} indent and position the cursor in the middle line
@@ -390,9 +389,14 @@ set autoread
         let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
         
 
+" SuperTab option for context aware completion
+let g:SuperTabDefaultCompletionType = "context"
 
-" clang complete stuff
-let g:clang_complete_auto = 1
+" Complete options (disable preview scratch window)
+set completeopt=menu,preview,longest
+ 
+" Disable auto popup, use <Tab> to autocomplete
+let g:clang_complete_auto = 0
 
 "not strictly necessary
 set omnifunc=ClangComplete
