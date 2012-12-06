@@ -10,3 +10,4 @@ nnoremap <silent> <esc><esc> :nohlsearch<cr><esc>
 
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
 
+hi Hint::after -append font-size: 12pt;

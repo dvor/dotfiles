@@ -376,9 +376,6 @@ set autoread
         " Resize splits when the window is resized
             au VimResized * exe "normal! \<c-w>="
 
-" convert current word to uppercase
-inoremap <C-u> <esc>viwUea
-nnoremap <C-u> viwUe
 
 
 " Плагины
