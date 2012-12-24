@@ -58,9 +58,9 @@ if has("gui_running")
 else
 endif
 
-colo solarized
-
 set t_Co=256
+colo solarized
+let g:solarized_termcolors=256
 
 " Make the command-line completion better
 set wildmenu
@@ -340,6 +340,8 @@ set autoread
 
     " reformat json code
     noremap <Leader>j :%!python -m json.tool<CR>
+
+    inoremap <C-u> <esc>viwUea
 
 
 
