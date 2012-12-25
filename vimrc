@@ -28,6 +28,7 @@
         Bundle 'msanders/snipmate.vim'
         "Bundle 'AutoComplPop'
         Bundle 'Lokaltog/vim-powerline'
+        Bundle 'DirDiff.vim'
 
     filetype plugin indent on     " required!
     " Brief help
@@ -116,7 +117,7 @@ set autoread
     set gcr=n:blinkon0      " отключаем мигание курсора в macvim. больше никакого стресса.
     set guioptions=         " вырубаем все лишнее из гуи, если надо потогглить см <f6>
     set t_co=256            " кол-во цветов
-    set guicursor=          " отключаем мигание курсора
+    "set guicursor=          " отключаем мигание курсора
     set splitbelow          " новый сплит будет ниже текущего :sp
     set splitright          " новый сплит будет правее текущего :vsp
     set shortmess+=I        " не показывать intro screen
