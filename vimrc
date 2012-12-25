@@ -28,7 +28,7 @@
         Bundle 'msanders/snipmate.vim'
         "Bundle 'AutoComplPop'
         Bundle 'Lokaltog/vim-powerline'
-        Bundle 'DirDiff.vim'
+        "Bundle 'DirDiff.vim'
 
     filetype plugin indent on     " required!
     " Brief help
