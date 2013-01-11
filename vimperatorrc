@@ -1,5 +1,6 @@
-nnoremap s :open<Space>google<Space>
-nnoremap S :tabopen<Space>google<Space>
+set defsearch=duckduckgo
+nnoremap s :open<Space>duckduckgo<Space>
+nnoremap S :tabopen<Space>duckduckgo<Space>
 
 nnoremap <C-l> gt
 nnoremap <C-h> gT
