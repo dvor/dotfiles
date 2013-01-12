@@ -344,6 +344,8 @@ set autoread
 
     inoremap <C-u> <esc>viwUea
 
+    " clear CtrlPCache (in case is new file was added)
+    nnoremap <Leader>c :CtrlPClearAllCaches<CR>
 
 
 " Environment
