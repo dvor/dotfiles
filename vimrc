@@ -13,9 +13,6 @@
     " NOTE: comments after Bundle command are not allowed...
     "
         Bundle 'flazz/vim-colorschemes'
-        " is requered by FuzzyFinder
-        Bundle 'L9'
-        Bundle 'FuzzyFinder'
         Bundle 'Rip-Rip/clang_complete'
         Bundle 'msanders/cocoa.vim'
         Bundle 'Townk/vim-autoclose'
