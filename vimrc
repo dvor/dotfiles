@@ -91,7 +91,7 @@ set autoread
                  " - when selecting a block, the size in screen characters:
                  "   {lines}x{columns}.
 
-    set scrolloff=999       " if you set it to a very large value (999) the 
+    set scrolloff=6       " if you set it to a very large value (999) the 
                             " cursor line will always be in the middle of the window
                             " (except at the start or end of the file or when long lines wrap).
 
