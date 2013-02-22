@@ -201,10 +201,6 @@ set autoread
 
     let mapleader = "," " мапим <leader> на запятую. по умолчанию <leader> это обратный слэш \
 
-    " FuzzyFinder
-    noremap <leader>f :FufFile<CR>
-
-
     noremap <leader>m :ListMethods<CR>
 
     " <esc><esc>
@@ -344,6 +340,12 @@ set autoread
     " clear CtrlPCache (in case is new file was added)
     nnoremap <Leader>c :CtrlPClearAllCaches<CR>
 
+    nnoremap <Leader>a :Alternate<CR>
+
+    nnoremap <Leader>s :split<CR>
+    nnoremap <Leader>d :close<CR>
+    nnoremap <Leader>f :vsplit<CR>
+    nnoremap <Leader>o :only<CR>
 
 " Environment
     set history=1000 " store lots of :cmdline history
@@ -400,3 +402,42 @@ let g:clang_complete_auto = 0
 set omnifunc=ClangComplete
 
 let g:clang_user_options='clang -cc1 -triple i386-apple-macosx10.6.7 -target-cpu yonah -target-linker-version 128.2 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/3.1 -fblocks -x objective-c -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -D __IPHONE_OS_VERSION_MIN_REQUIRED=50100 || exit 0'
+
+
+
+"set runtimepath-=~/.vim/bundle/vim-autoclose
+"set runtimepath-=~/.vim/bundle/vim-autoclose/after
+"
+"set runtimepath-=~/.vim/bundle/vim-buffergator
+"set runtimepath-=~/.vim/bundle/vim-buffergator/after
+"
+"set runtimepath-=~/.vim/bundle/supertab
+"set runtimepath-=~/.vim/bundle/supertab/after
+"
+"set runtimepath-=~/.vim/bundle/IndexedSearch
+"set runtimepath-=~/.vim/bundle/IndexedSearch/after
+"
+"set runtimepath-=~/.vim/bundle/ack.vim
+"set runtimepath-=~/.vim/bundle/ack.vim/after
+"
+"set runtimepath-=~/.vim/bundle/nerdcommenter
+"set runtimepath-=~/.vim/bundle/nerdcommenter/after
+"
+"set runtimepath-=~/.vim/bundle/ctrlp.vim
+"set runtimepath-=~/.vim/bundle/ctrlp.vim/after
+"
+"set runtimepath-=~/.vim/bundle/snipmate.vim
+"set runtimepath-=~/.vim/bundle/snipmate.vim/after
+"
+"set runtimepath-=~/.vim/bundle/vim-powerline
+"set runtimepath-=~/.vim/bundle/vim-powerline/after
+
+
+" ObjC
+"set runtimepath-=~/.vim/bundle/clang_complete
+"set runtimepath-=~/.vim/bundle/clang_complete/after
+
+"set runtimepath-=~/.vim/bundle/cocoa.vim
+"set runtimepath-=~/.vim/bundle/cocoa.vim/after
+
+
