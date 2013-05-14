@@ -1,4 +1,3 @@
-set defsearch=duckduckgo
 nnoremap s :open<Space>duckduckgo<Space>
 nnoremap S :tabopen<Space>duckduckgo<Space>
 

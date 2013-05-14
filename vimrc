@@ -26,6 +26,7 @@
         "Bundle 'AutoComplPop'
         Bundle 'Lokaltog/vim-powerline'
         "Bundle 'DirDiff.vim'
+        Bundle 'Google-translator'
 
     filetype plugin indent on     " required!
     " Brief help
@@ -50,7 +51,8 @@ filetype indent on
 " Interface
 
 if has("gui_running")
-    set guifont=Menlo\ Regular:h16
+    "set guifont=Menlo\ Regular:h15
+    set guifont=Monaco:h16
     " guioptions
     set go=acg
 else
@@ -99,9 +101,9 @@ set autoread
     "set list                " display unprintable characters
     set wrap                " включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
-        set colorcolumn=95 " подсвечиваем 95 столбец
+        set colorcolumn=90 " подсвечиваем 95 столбец
     end
-    set textwidth=95
+    set textwidth=90
     set formatoptions-=o    " dont continue comments when pushing o/o
     set linebreak           " перенос не разрывая слов
     set autoindent          " копирует отступ от предыдущей строки
