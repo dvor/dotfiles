@@ -14,19 +14,17 @@
     "
         Bundle 'flazz/vim-colorschemes'
         Bundle 'Rip-Rip/clang_complete'
-        Bundle 'msanders/cocoa.vim'
         Bundle 'Townk/vim-autoclose'
+        Bundle 'dvor/cocoa.vim'
         Bundle 'jeetsukumaran/vim-buffergator'
-        Bundle 'git://github.com/ervandew/supertab.git'
-        Bundle 'git://github.com/vim-scripts/IndexedSearch.git'
-        Bundle 'git://github.com/mileszs/ack.vim.git'
-        Bundle 'git://github.com/scrooloose/nerdcommenter.git'
+        Bundle 'ervandew/supertab'
+        Bundle 'vim-scripts/IndexedSearch'
+        Bundle 'mileszs/ack.vim'
+        Bundle 'scrooloose/nerdcommenter'
         Bundle 'kien/ctrlp.vim'
         Bundle 'msanders/snipmate.vim'
-        "Bundle 'AutoComplPop'
         Bundle 'Lokaltog/vim-powerline'
-        "Bundle 'DirDiff.vim'
-        Bundle 'Google-translator'
+        Bundle 'godlygeek/tabular'
 
     filetype plugin indent on     " required!
     " Brief help
@@ -46,7 +44,6 @@ endif
 filetype on
 filetype plugin on
 filetype indent on
-
 
 " Interface
 
@@ -403,7 +400,7 @@ let g:clang_complete_auto = 0
 "not strictly necessary
 set omnifunc=ClangComplete
 
-let g:clang_user_options='clang -cc1 -triple i386-apple-macosx10.6.7 -target-cpu yonah -target-linker-version 128.2 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/3.1 -fblocks -x objective-c -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -D __IPHONE_OS_VERSION_MIN_REQUIRED=50100 || exit 0'
+let g:clang_user_options='clang -cc1 -triple i386-apple-macosx10.6.7 -target-cpu yonah -target-linker-version 128.2 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.2 -fblocks -x objective-c -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -D __IPHONE_OS_VERSION_MIN_REQUIRED=50100 || exit 0'
 
 
 
