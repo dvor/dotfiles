@@ -1,5 +1,8 @@
-nnoremap s :open<Space>duckduckgo<Space>
-nnoremap S :tabopen<Space>duckduckgo<Space>
+nnoremap a :open<Space>duckduckgo<Space>
+nnoremap A :tabopen<Space>duckduckgo<Space>
+
+nnoremap s :open<Space>duckduckgo !s<Space>
+nnoremap S :tabopen<Space>duckduckgo !s<Space>
 
 nnoremap c :open<Space>duckduckgo<Space>!cocoa<Space>
 nnoremap C :tabopen<Space>duckduckgo<Space>!cocoa<Space>
