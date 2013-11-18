@@ -95,7 +95,7 @@ set autoread
                             " (except at the start or end of the file or when long lines wrap).
 
     set showtabline=1       " показывать вкладки табов только когда их больше одной
-    "set list                " display unprintable characters
+    set list                " display unprintable characters
     set wrap                " включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
         set colorcolumn=90 " подсвечиваем 95 столбец
@@ -216,31 +216,6 @@ set autoread
         set pastetoggle=<leader>p
 
 
-    " ,nm
-        " toggle type of line numbers
-        " http://stackoverflow.com/questions/4387210/vim-how-to-map-two-tasks-under-one-shortcut-key
-        " vim 7.3 required
-        let g:relativenumber = 0
-        function! ToogleRelativeNumber()
-          if g:relativenumber == 0
-            let g:relativenumber = 1
-            set norelativenumber
-            set number
-            echo "Show line numbers"
-          elseif g:relativenumber == 1
-            let g:relativenumber = 2
-            set nonumber
-            set relativenumber
-            echo "Show relative line numbers"
-          else
-            let g:relativenumber = 0
-            set nonumber
-            set norelativenumber
-            echo "Show no line numbers"
-          endif
-        endfunction
-        noremap <Leader>nm :call ToogleRelativeNumber()<cr>
-
     " ,g
         " Fast grep
         " грепает в текущей директории по слову, на котором стоит курсор
@@ -287,26 +262,6 @@ set autoread
         nnoremap g* g*zz
         nnoremap g# g#zz
 
-    " K to split
-        " Basically this splits the current line into two new ones at the cursor position,
-        " then joins the second one with whatever comes next.
-        "
-        " Example:                      Cursor Here
-        "                                    |
-        "                                    V
-        " foo = ('hello', 'world', 'a', 'b', 'c',
-        "        'd', 'e')
-        "
-        " becomes
-        "
-        " foo = ('hello', 'world', 'a', 'b',
-        "        'c', 'd', 'e')
-        "
-        " Especially useful for adding items in the middle of long lists/tuples in Python
-        " while maintaining a sane text width.
-        nnoremap K <nop>
-        nnoremap K h/[^ ]<cr>"zd$jyyP^v$h"zpJk:s/\v +$//<cr>:noh<cr>j^
-
     " Don't skip wrap lines
         " Еще раз и попонятнее:
         " если строка n длиная и не влезла в окно — она перенесется на
@@ -315,11 +270,10 @@ set autoread
         noremap j gj
         noremap k gk
 
-    " Создаем пустой сплит относительно текущего
-        nnoremap <Leader><left>  :leftabove  vnew<CR>
-        nnoremap <Leader><right> :rightbelow vnew<CR>
-        nnoremap <Leader><up>    :leftabove  new<CR>
-        nnoremap <Leader><down>  :rightbelow new<CR>
+    " 
+        nnoremap <Leader>n :cnext<CR>
+        nnoremap <Leader>N :cprevious<CR>
+
 
     " {<CR>
         " auto complete {} indent and position the cursor in the middle line
@@ -330,9 +284,6 @@ set autoread
     " Ремапим русские символы
         set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
-
-    " reformat json code
-    noremap <Leader>j :%!python -m json.tool<CR>
 
     inoremap <C-u> <esc>viwUea
 
