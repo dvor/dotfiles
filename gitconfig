@@ -1,0 +1,21 @@
+[core]
+    editor = vim
+[user]
+    name = Dmitry Vorobyov
+    email = d@dvor.me
+[color]
+    ui = always
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+    cia = commit -a
+    ciam = commit -am
+    br = branch
+    mn = merge --no-ff
+    rh = reset --hard
+    pp = pull --prune
+[push]
+    default = simple
+[diff]
+    tool = vimdiff
