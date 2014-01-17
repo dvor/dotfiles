@@ -7,7 +7,7 @@
 
 # aliases
 alias ls='ls --color=auto'
-alias v='~/dotfiles/scripts/./vim-server.sh'
+alias g='git'
 
 PS1='[\u@\h \W]\$ '
 
@@ -17,3 +17,5 @@ if [ -f /etc/bash_completion ]; then
 
 fi
 
+PATH=$PATH:/home/dvor/.gem/ruby/2.0.0/bin
+export PATH
