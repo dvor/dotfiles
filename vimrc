@@ -25,6 +25,8 @@
         Bundle 'msanders/snipmate.vim'
         Bundle 'Lokaltog/vim-powerline'
         Bundle 'godlygeek/tabular'
+        Bundle 'Lokaltog/vim-easymotion'
+        "Bundle 'b4winckler/vim-objc'
 
     filetype plugin indent on     " required!
     " Brief help
@@ -75,7 +77,7 @@ set autoread
                                   " где 1 — номер строки.
 
     set encoding=utf-8 " character encoding used inside Vim.
-    set fileencodings=utf-8,cp1251 " Возможные кодировки файлов и последовательность определения
+    "set fileencodings=utf-8,cp1251 " Возможные кодировки файлов и последовательность определения
 
     set title    " window title
                  " the title of the window will be set to the value of 'titlestring'
@@ -297,6 +299,15 @@ set autoread
     nnoremap <Leader>f :vsplit<CR>
     nnoremap <Leader>o :only<CR>
 
+    " Tabularize plugin
+    nnoremap <leader>t :Tabularize /
+    vnoremap <leader>t :Tabularize /
+
+    " remove buffergator mappings, add only buffer catalog
+    let g:buffergator_suppress_keymaps=1
+    nnoremap <leader>b :BuffergatorOpen<CR>
+
+
 " Environment
     set history=1000 " store lots of :cmdline history
 
@@ -353,7 +364,12 @@ set omnifunc=ClangComplete
 
 let g:clang_user_options='clang -cc1 -triple i386-apple-macosx10.6.7 -target-cpu yonah -target-linker-version 128.2 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.2 -fblocks -x objective-c -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -D __IPHONE_OS_VERSION_MIN_REQUIRED=50100 || exit 0'
 
+let g:EasyMotion_keys = 'hjklasdfgyuiopqwertnmzxcvb'
+hi link EasyMotionTarget ErrorMsg
 
+
+"  Vim highlights curly braces in blocks as errors, fixing it
+let c_no_curly_error = 1
 
 "set runtimepath-=~/.vim/bundle/vim-autoclose
 "set runtimepath-=~/.vim/bundle/vim-autoclose/after
