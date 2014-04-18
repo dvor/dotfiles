@@ -26,7 +26,7 @@
         Bundle 'Lokaltog/vim-powerline'
         Bundle 'godlygeek/tabular'
         Bundle 'Lokaltog/vim-easymotion'
-        "Bundle 'b4winckler/vim-objc'
+        Bundle 'tpope/vim-fugitive'
 
     filetype plugin indent on     " required!
     " Brief help

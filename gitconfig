@@ -19,3 +19,5 @@
     default = simple
 [diff]
     tool = vimdiff
+[credential]
+    helper = osxkeychain
