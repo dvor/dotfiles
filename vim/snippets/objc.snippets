@@ -1,0 +1,39 @@
+# block
+snippet block
+	${1:void} (^${2:success})(${3:NSObject *}) = ^(${4:$3}${5}) {
+		${6}
+	};
+# shared instance
+snippet shared
+	#pragma mark -  Lifecycle
+
+	- (id)init
+	{
+		return nil;
+	}
+
+	- (id)initPrivate
+	{
+		if (self = [super init]) {
+
+		}
+
+		return self;
+	}
+
+	+ (instancetype)sharedInstance
+	{
+		static ${1:`Filename('', 'someClass')`} *instance;
+		static dispatch_once_t onceToken;
+
+		dispatch_once(&onceToken, ^{
+			instance = [[$1 alloc] initPrivate];
+		});
+
+		return instance;
+	}
+
+	${2}
+# weak self
+snippet weak
+	__weak ${1:`Filename('', 'someClass')`} *weakSelf = self;${2}
