@@ -1,3 +1,7 @@
 .DS_Store
-vim/bundle/
-vim/vim
+
+dotfiles/vim/bundle/
+dotfiles/vim/vim
+
+config/ranger/history
+config/ranger/tagged
