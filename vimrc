@@ -356,6 +356,8 @@ let g:SuperTabDefaultCompletionType = "context"
 " Complete options (disable preview scratch window)
 set completeopt=menu,preview,longest
  
+let g:clang_library_path = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"
+
 " Disable auto popup, use <Tab> to autocomplete
 let g:clang_complete_auto = 0
 
