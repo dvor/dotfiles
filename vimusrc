@@ -1,0 +1,13 @@
+# a dark-on-light color scheme
+color tab red white
+color main green white
+color ruler green white
+color songstatus blue white
+color playstatus blue white
+color error black red
+color input black white
+color suggestions green white
+
+song-format ((%artist% - %title%)|%filename%) [%length%]
+
+map q :quit<cr>
