@@ -2,39 +2,46 @@
     set nocompatible " be iMproved
     filetype off     " required!
 
-    set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
     " let Vundle manage Vundle
     " required!
-    Bundle 'git://github.com/gmarik/vundle.git'
+    Plugin 'gmarik/Vundle.vim'
 
-    " My Bundles here:
-    " NOTE: comments after Bundle command are not allowed...
+    " The following are examples of different formats supported.
+    " Keep Plugin commands between vundle#begin/end.
     "
-        Bundle 'flazz/vim-colorschemes'
-        Bundle 'Rip-Rip/clang_complete'
-        Bundle 'Townk/vim-autoclose'
-        Bundle 'dvor/cocoa.vim'
-        Bundle 'jeetsukumaran/vim-buffergator'
-        Bundle 'ervandew/supertab'
-        Bundle 'vim-scripts/IndexedSearch'
-        Bundle 'mileszs/ack.vim'
-        Bundle 'scrooloose/nerdcommenter'
-        Bundle 'kien/ctrlp.vim'
-        Bundle 'msanders/snipmate.vim'
-        Bundle 'Lokaltog/vim-powerline'
-        Bundle 'godlygeek/tabular'
-        Bundle 'Lokaltog/vim-easymotion'
-        Bundle 'tpope/vim-fugitive'
+        Plugin 'flazz/vim-colorschemes'
+        Plugin 'Rip-Rip/clang_complete'
+        Plugin 'Townk/vim-autoclose'
+        Plugin 'dvor/cocoa.vim'
+        Plugin 'jeetsukumaran/vim-buffergator'
+        Plugin 'ervandew/supertab'
+        Plugin 'vim-scripts/IndexedSearch'
+        Plugin 'mileszs/ack.vim'
+        Plugin 'scrooloose/nerdcommenter'
+        Plugin 'kien/ctrlp.vim'
+        Plugin 'msanders/snipmate.vim'
+        Plugin 'Lokaltog/vim-powerline'
+        Plugin 'godlygeek/tabular'
+        Plugin 'Lokaltog/vim-easymotion'
+        Plugin 'tpope/vim-fugitive'
 
-    filetype plugin indent on     " required!
+    " All of your Plugins must be added before the following line
+    call vundle#end()            " required
+    filetype plugin indent on    " required
+    " To ignore plugin indent changes, instead use:
+    "filetype plugin on
+    "
     " Brief help
-    " :BundleList          - list configured bundles
-    " :BundleInstall(!)    - install(update) bundles
-    " :BundleSearch(!) foo - search(or refresh cache first) for foo
-    " :BundleClean(!)      - confirm(or auto-ap prove) removal of unused bundles
+    " :PluginList          - list configured plugins
+    " :PluginInstall(!)    - install (update) plugins
+    " :PluginSearch(!) foo - search (or refresh cache first) for foo
+    " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+    "
     " see :h vundle for more details or wiki for FAQ
+    " Put your non-Plugin stuff after this line
 
 " russian language is broken on mac, so use english instead
 if has("mac")
