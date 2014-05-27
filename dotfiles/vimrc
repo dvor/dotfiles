@@ -27,6 +27,8 @@
         Plugin 'godlygeek/tabular'
         Plugin 'Lokaltog/vim-easymotion'
         Plugin 'tpope/vim-fugitive'
+        Plugin 'justinmk/vim-sneak'
+        Plugin 'terryma/vim-multiple-cursors'
 
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
@@ -107,9 +109,9 @@ set autoread
     set list                " display unprintable characters
     set wrap                " включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
-        set colorcolumn=90 " подсвечиваем 95 столбец
+        set colorcolumn=115 " подсвечиваем 95 столбец
     end
-    set textwidth=90
+    set textwidth=115
     set formatoptions-=o    " dont continue comments when pushing o/o
     set linebreak           " перенос не разрывая слов
     set autoindent          " копирует отступ от предыдущей строки
@@ -219,10 +221,7 @@ set autoread
         vnoremap < <gv
         vnoremap > >gv
 
-    " ,p
-        " вставлять код извне без этой строчки проблематично, без нее начитается
-        " бешеный реформат кода
-        set pastetoggle=<leader>p
+        set pastetoggle=<F2>
 
 
     " ,g
@@ -379,40 +378,4 @@ hi link EasyMotionTarget ErrorMsg
 
 "  Vim highlights curly braces in blocks as errors, fixing it
 let c_no_curly_error = 1
-
-"set runtimepath-=~/.vim/bundle/vim-autoclose
-"set runtimepath-=~/.vim/bundle/vim-autoclose/after
-"
-"set runtimepath-=~/.vim/bundle/vim-buffergator
-"set runtimepath-=~/.vim/bundle/vim-buffergator/after
-"
-"set runtimepath-=~/.vim/bundle/supertab
-"set runtimepath-=~/.vim/bundle/supertab/after
-"
-"set runtimepath-=~/.vim/bundle/IndexedSearch
-"set runtimepath-=~/.vim/bundle/IndexedSearch/after
-"
-"set runtimepath-=~/.vim/bundle/ack.vim
-"set runtimepath-=~/.vim/bundle/ack.vim/after
-"
-"set runtimepath-=~/.vim/bundle/nerdcommenter
-"set runtimepath-=~/.vim/bundle/nerdcommenter/after
-"
-"set runtimepath-=~/.vim/bundle/ctrlp.vim
-"set runtimepath-=~/.vim/bundle/ctrlp.vim/after
-"
-"set runtimepath-=~/.vim/bundle/snipmate.vim
-"set runtimepath-=~/.vim/bundle/snipmate.vim/after
-"
-"set runtimepath-=~/.vim/bundle/vim-powerline
-"set runtimepath-=~/.vim/bundle/vim-powerline/after
-
-
-" ObjC
-"set runtimepath-=~/.vim/bundle/clang_complete
-"set runtimepath-=~/.vim/bundle/clang_complete/after
-
-"set runtimepath-=~/.vim/bundle/cocoa.vim
-"set runtimepath-=~/.vim/bundle/cocoa.vim/after
-
 
