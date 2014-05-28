@@ -2,39 +2,48 @@
     set nocompatible " be iMproved
     filetype off     " required!
 
-    set rtp+=~/.vim/bundle/vundle/
-    call vundle#rc()
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
     " let Vundle manage Vundle
     " required!
-    Bundle 'git://github.com/gmarik/vundle.git'
+    Plugin 'gmarik/Vundle.vim'
 
-    " My Bundles here:
-    " NOTE: comments after Bundle command are not allowed...
+    " The following are examples of different formats supported.
+    " Keep Plugin commands between vundle#begin/end.
     "
-        Bundle 'flazz/vim-colorschemes'
-        Bundle 'Rip-Rip/clang_complete'
-        Bundle 'Townk/vim-autoclose'
-        Bundle 'dvor/cocoa.vim'
-        Bundle 'jeetsukumaran/vim-buffergator'
-        Bundle 'ervandew/supertab'
-        Bundle 'vim-scripts/IndexedSearch'
-        Bundle 'mileszs/ack.vim'
-        Bundle 'scrooloose/nerdcommenter'
-        Bundle 'kien/ctrlp.vim'
-        Bundle 'msanders/snipmate.vim'
-        Bundle 'Lokaltog/vim-powerline'
-        Bundle 'godlygeek/tabular'
-        Bundle 'Lokaltog/vim-easymotion'
-        Bundle 'tpope/vim-fugitive'
+        Plugin 'flazz/vim-colorschemes'
+        Plugin 'Rip-Rip/clang_complete'
+        Plugin 'Townk/vim-autoclose'
+        Plugin 'dvor/cocoa.vim'
+        Plugin 'jeetsukumaran/vim-buffergator'
+        Plugin 'ervandew/supertab'
+        Plugin 'vim-scripts/IndexedSearch'
+        Plugin 'mileszs/ack.vim'
+        Plugin 'scrooloose/nerdcommenter'
+        Plugin 'kien/ctrlp.vim'
+        Plugin 'msanders/snipmate.vim'
+        Plugin 'Lokaltog/vim-powerline'
+        Plugin 'godlygeek/tabular'
+        Plugin 'Lokaltog/vim-easymotion'
+        Plugin 'tpope/vim-fugitive'
+        Plugin 'justinmk/vim-sneak'
+        Plugin 'terryma/vim-multiple-cursors'
 
-    filetype plugin indent on     " required!
+    " All of your Plugins must be added before the following line
+    call vundle#end()            " required
+    filetype plugin indent on    " required
+    " To ignore plugin indent changes, instead use:
+    "filetype plugin on
+    "
     " Brief help
-    " :BundleList          - list configured bundles
-    " :BundleInstall(!)    - install(update) bundles
-    " :BundleSearch(!) foo - search(or refresh cache first) for foo
-    " :BundleClean(!)      - confirm(or auto-ap prove) removal of unused bundles
+    " :PluginList          - list configured plugins
+    " :PluginInstall(!)    - install (update) plugins
+    " :PluginSearch(!) foo - search (or refresh cache first) for foo
+    " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+    "
     " see :h vundle for more details or wiki for FAQ
+    " Put your non-Plugin stuff after this line
 
 " russian language is broken on mac, so use english instead
 if has("mac")
@@ -100,9 +109,9 @@ set autoread
     set list                " display unprintable characters
     set wrap                " включаем перенос строк (http://vimcasts.org/episodes/soft-wrapping-text/)
     if version >= 703
-        set colorcolumn=90 " подсвечиваем 95 столбец
+        set colorcolumn=115 " подсвечиваем 95 столбец
     end
-    set textwidth=90
+    set textwidth=115
     set formatoptions-=o    " dont continue comments when pushing o/o
     set linebreak           " перенос не разрывая слов
     set autoindent          " копирует отступ от предыдущей строки
@@ -212,10 +221,7 @@ set autoread
         vnoremap < <gv
         vnoremap > >gv
 
-    " ,p
-        " вставлять код извне без этой строчки проблематично, без нее начитается
-        " бешеный реформат кода
-        set pastetoggle=<leader>p
+        set pastetoggle=<F2>
 
 
     " ,g
@@ -372,40 +378,4 @@ hi link EasyMotionTarget ErrorMsg
 
 "  Vim highlights curly braces in blocks as errors, fixing it
 let c_no_curly_error = 1
-
-"set runtimepath-=~/.vim/bundle/vim-autoclose
-"set runtimepath-=~/.vim/bundle/vim-autoclose/after
-"
-"set runtimepath-=~/.vim/bundle/vim-buffergator
-"set runtimepath-=~/.vim/bundle/vim-buffergator/after
-"
-"set runtimepath-=~/.vim/bundle/supertab
-"set runtimepath-=~/.vim/bundle/supertab/after
-"
-"set runtimepath-=~/.vim/bundle/IndexedSearch
-"set runtimepath-=~/.vim/bundle/IndexedSearch/after
-"
-"set runtimepath-=~/.vim/bundle/ack.vim
-"set runtimepath-=~/.vim/bundle/ack.vim/after
-"
-"set runtimepath-=~/.vim/bundle/nerdcommenter
-"set runtimepath-=~/.vim/bundle/nerdcommenter/after
-"
-"set runtimepath-=~/.vim/bundle/ctrlp.vim
-"set runtimepath-=~/.vim/bundle/ctrlp.vim/after
-"
-"set runtimepath-=~/.vim/bundle/snipmate.vim
-"set runtimepath-=~/.vim/bundle/snipmate.vim/after
-"
-"set runtimepath-=~/.vim/bundle/vim-powerline
-"set runtimepath-=~/.vim/bundle/vim-powerline/after
-
-
-" ObjC
-"set runtimepath-=~/.vim/bundle/clang_complete
-"set runtimepath-=~/.vim/bundle/clang_complete/after
-
-"set runtimepath-=~/.vim/bundle/cocoa.vim
-"set runtimepath-=~/.vim/bundle/cocoa.vim/after
-
 

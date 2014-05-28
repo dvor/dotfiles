@@ -1,3 +1,5 @@
+set toolbars+=nonavigation
+
 nnoremap a :open<Space>duckduckgo<Space>
 nnoremap A :tabopen<Space>duckduckgo<Space>
 
