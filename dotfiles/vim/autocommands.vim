@@ -8,6 +8,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Resize splits when the window is resized
 autocmd VimResized * exe "normal! \<c-w>="
 
+" Text
+autocmd FileType text setlocal textwidth=80
+
 " Objective C
 autocmd FileType objc setlocal omnifunc=ClangComplete
 autocmd FileType objc setlocal colorcolumn=115           " Highlight 115 column

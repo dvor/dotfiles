@@ -20,8 +20,8 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'kien/ctrlp.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'rking/ag.vim'
-" Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/IndexedSearch'
+" Plugin 'scrooloose/syntastic'
 
 " Colors
 Plugin 'bling/vim-airline'
@@ -30,14 +30,6 @@ Plugin 'flazz/vim-colorschemes'
 " Objective C
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'dvor/cocoa.vim'
-
-
-"Plugin 'mileszs/ack.vim'
-"Plugin 'scrooloose/nerdcommenter'
-"Plugin 'Lokaltog/vim-powerline'
-"Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'terryma/vim-multiple-cursors'
-
 
 source $HOME/.vim/config.vim
 source $HOME/.vim/colors.vim
