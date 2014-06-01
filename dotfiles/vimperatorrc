@@ -6,9 +6,6 @@ nnoremap A :tabopen<Space>duckduckgo<Space>
 nnoremap s :open<Space>startpage<Space>
 nnoremap S :tabopen<Space>startpage<Space>
 
-nnoremap c :open<Space>duckduckgo<Space>!cocoa<Space>
-nnoremap C :tabopen<Space>duckduckgo<Space>!cocoa<Space>
-
 nnoremap <C-l> gt
 nnoremap <C-h> gT
 

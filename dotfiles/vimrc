@@ -313,6 +313,8 @@ set autoread
     let g:buffergator_suppress_keymaps=1
     nnoremap <leader>b :BuffergatorOpen<CR>
 
+    nnoremap <leader>h :!open dash://<cword><cr><cr>
+
 
 " Environment
     set history=1000 " store lots of :cmdline history

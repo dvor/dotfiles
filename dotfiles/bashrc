@@ -19,3 +19,6 @@ fi
 
 PATH=$PATH:/home/dvor/.gem/ruby/2.0.0/bin
 export PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
