@@ -1,13 +1,6 @@
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
 
-let g:clang_library_path = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"
-
-" Disable auto popup, use <Tab> to autocomplete
-let g:clang_complete_auto = 0
-
-let g:clang_user_options='clang -cc1 -triple i386-apple-macosx10.6.7 -target-cpu yonah -target-linker-version 128.2 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/4.2 -fblocks -x objective-c -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -D __IPHONE_OS_VERSION_MIN_REQUIRED=50100 || exit 0'
-
 "  Vim highlights curly braces in blocks as errors, fixing it
 let c_no_curly_error = 1
 

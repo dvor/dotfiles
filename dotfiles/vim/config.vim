@@ -43,6 +43,8 @@ set backspace=indent,eol,start       " Adds intuitive backspacing
 set nobackup                         " No backup files
 set noswapfile                       " No swap files
 set completeopt=menu,preview,longest " Complete options (disable preview scratch window)
+set visualbell                       " Don't beep!
+set t_vb=                            " Don't beep!
 
 set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:× " Show tabs and trailing spaces
 

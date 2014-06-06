@@ -1,8 +1,10 @@
 set nocompatible " be iMproved
+filetype off     " required
 
 " Setup Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
+
 Plugin 'gmarik/vundle.vim'
 
 " tpope utilities
@@ -20,6 +22,7 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'kien/ctrlp.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'rking/ag.vim'
+Plugin 'jceb/vim-orgmode'
 Plugin 'vim-scripts/IndexedSearch'
 " Plugin 'scrooloose/syntastic'
 
@@ -30,6 +33,10 @@ Plugin 'flazz/vim-colorschemes'
 " Objective C
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'dvor/cocoa.vim'
+
+call vundle#end()         " required
+filetype plugin indent on " required
+
 
 source $HOME/.vim/config.vim
 source $HOME/.vim/colors.vim
