@@ -34,6 +34,9 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'dvor/cocoa.vim'
 
+" Swift
+Plugin 'toyamarinyon/vim-swift'
+
 call vundle#end()         " required
 filetype plugin indent on " required
 
