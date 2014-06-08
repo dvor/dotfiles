@@ -26,6 +26,7 @@ set smartindent                      " Auto indent extra indent levels in certai
 set expandtab                        " Make spaces not tabs
 set shiftwidth=4                     " 4 spaces when indented
 set tabstop=4                        " 4 space tabs
+set softtabstop=4                    " Number of spaces that a <Tab> counts for while performing editing operations
 set splitbelow                       " :sp new split will be below current
 set splitright                       " :vsp new split will be on the right side of current
 set shortmess+=I                     " Removing intro screen
