@@ -17,6 +17,9 @@ autocmd FileType objc setlocal commentstring=//\ %s      " Comment string for vi
 autocmd FileType objc nnoremap <Leader>a :Alternate<CR>  " cocoa.vim plugin
 autocmd FileType objc noremap <leader>m :ListMethods<CR> " cocoa.vim plugin
 
+autocmd FileType swift setlocal colorcolumn=115 "Highlight 115 column
+autocmd FileType swift setlocal commentstring=//\ %s      " Comment string for vim-commentary plugin
+
 " autocmd FileType objc setlocal omnifunc=ClangComplete
 " autocmd FileType objc let g:clang_complete_auto = 0   " Disable auto popup, use <Tab> to autocomplete
 " autocmd FileType objc let g:clang_library_path = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/"
