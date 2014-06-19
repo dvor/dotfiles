@@ -18,3 +18,5 @@ let g:airline#extensions#whitespace#enabled=0
 
 " remove buffergator mappings, add only buffer catalog
 let g:buffergator_suppress_keymaps=1
+
+let g:clang_complete_auto=0
