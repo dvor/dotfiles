@@ -20,3 +20,5 @@ let g:airline#extensions#whitespace#enabled=0
 let g:buffergator_suppress_keymaps=1
 
 let g:clang_complete_auto=0
+
+let g:ctrlp_root_markers = ['*.xcodeproj']
