@@ -22,3 +22,6 @@ let g:buffergator_suppress_keymaps=1
 let g:clang_complete_auto=0
 
 let g:ctrlp_root_markers = ['*.xcodeproj']
+
+" notes.vim
+:let g:notes_directories = ['~/Dropbox/vimnotes']
