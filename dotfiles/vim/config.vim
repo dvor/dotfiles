@@ -55,8 +55,3 @@ if has("gui_running")
     set guifont=Monaco:h16
     set gcr=n:blinkon0     " Disabling cursor flashing. No more stress.
 endif
-
-" Vim and OS share clipboard
-if exists("+clipboard")
-  set clipboard=unnamed
-endif
