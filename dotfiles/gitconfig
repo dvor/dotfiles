@@ -21,3 +21,5 @@
     tool = vimdiff
 [credential]
     helper = osxkeychain
+[github]
+	user = dvor

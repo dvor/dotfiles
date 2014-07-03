@@ -38,9 +38,12 @@ Plugin 'dvor/cocoa.vim'
 Plugin 'toyamarinyon/vim-swift'
 
 " Other
-" required by vim-notes
+" vim-notes
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
+" gist-vim
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 call vundle#end()         " required
 filetype plugin indent on " required

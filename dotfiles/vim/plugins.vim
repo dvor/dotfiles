@@ -23,3 +23,9 @@ let g:clang_complete_auto=0
 
 " notes.vim
 :let g:notes_directories = ['~/Dropbox/vimnotes']
+
+" gist-vim
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_post_private = 1
+
