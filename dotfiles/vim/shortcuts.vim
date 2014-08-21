@@ -62,3 +62,5 @@ nnoremap <leader>b :BuffergatorOpen<CR>
 " open dash
 nnoremap <leader>h :!open dash://<cword><cr><cr>
 
+" format json
+nnoremap <leader>j :%!python -m json.tool<CR>
