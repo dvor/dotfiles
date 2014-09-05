@@ -64,3 +64,6 @@ nnoremap <leader>h :!open dash://<cword><cr><cr>
 
 " format json
 nnoremap <leader>j :%!python -m json.tool<CR>
+
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)

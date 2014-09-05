@@ -25,6 +25,7 @@ Plugin 'rking/ag.vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'vim-scripts/IndexedSearch'
 " Plugin 'scrooloose/syntastic'
+Plugin 'terryma/vim-expand-region'
 
 " Colors
 Plugin 'bling/vim-airline'
