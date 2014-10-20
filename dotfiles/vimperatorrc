@@ -17,7 +17,7 @@ set hintchars=hjklasdfgyuiopqwertnmzxcvb
 
 hi Hint::after -append font-size: 12pt;
 
-nnoremap ,n gnngnfgnhgnognygng5gT
+nnoremap ,n gnngnfgnhgnjgnognygng6gT
 
 " Russian language keyboard mappings (UTF-8) 
 map ё `
