@@ -26,9 +26,10 @@ Plugin 'jceb/vim-orgmode'
 Plugin 'vim-scripts/IndexedSearch'
 " Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-expand-region'
+Plugin 'bling/vim-airline'
+Plugin 'mhinz/vim-startify'
 
 " Colors
-Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 
 " Objective C
