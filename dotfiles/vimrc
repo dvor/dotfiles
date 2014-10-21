@@ -33,7 +33,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'flazz/vim-colorschemes'
 
 " Objective C
-Plugin 'Rip-Rip/clang_complete'
+" Plugin 'Rip-Rip/clang_complete'
 Plugin 'dvor/cocoa.vim'
 
 " Swift
