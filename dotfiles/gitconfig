@@ -1,7 +1,7 @@
 [core]
     editor = vim
 [user]
-    name = Dmitry Vorobyov
+    name = Dmytro Vorobiov
     email = d@dvor.me
 [color]
     ui = always
