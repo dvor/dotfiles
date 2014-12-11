@@ -27,7 +27,6 @@ Plugin 'vim-scripts/IndexedSearch'
 " Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-expand-region'
 Plugin 'bling/vim-airline'
-Plugin 'mhinz/vim-startify'
 
 " Colors
 Plugin 'flazz/vim-colorschemes'
