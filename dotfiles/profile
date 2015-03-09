@@ -1,0 +1,12 @@
+export PATH="/usr/local/bin:$PATH"
+
+HISTSIZE=100000
+
+set -o vi
+
+alias g=git
+alias gsb="git status && echo ---- && git branch"
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
