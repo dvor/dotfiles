@@ -10,3 +10,6 @@ alias gsb="git status && echo ---- && git branch"
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
+
+# autocompletion for g alias
+complete -o default -o nospace -F _git g
