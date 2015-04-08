@@ -34,7 +34,6 @@ Plugin 'flazz/vim-colorschemes'
 " Objective C
 " Plugin 'Rip-Rip/clang_complete'
 Plugin 'dvor/cocoa.vim'
-Plugin 'ompugao/uncrustify-vim'
 
 " Swift
 Plugin 'toyamarinyon/vim-swift'
