@@ -24,7 +24,6 @@ Plugin 'msanders/snipmate.vim'
 Plugin 'rking/ag.vim'
 Plugin 'jceb/vim-orgmode'
 Plugin 'vim-scripts/IndexedSearch'
-" Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-expand-region'
 Plugin 'bling/vim-airline'
 
@@ -32,19 +31,11 @@ Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 
 " Objective C
-" Plugin 'Rip-Rip/clang_complete'
 Plugin 'dvor/cocoa.vim'
+Plugin 'tokorom/xcode-actions.vim'
 
 " Swift
 Plugin 'toyamarinyon/vim-swift'
-
-" Other
-" vim-notes
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
-" gist-vim
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
 
 call vundle#end()         " required
 filetype plugin indent on " required
