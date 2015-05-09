@@ -32,3 +32,5 @@ function! FileType_Swift()
 
     nnoremap <buffer> <Leader>sw :!xcrun swift -i %<CR>
 endfunction
+
+command! Uncrustify :silent !uncrustify -c uncrustify.cfg -l OC+ --no-backup "%"
