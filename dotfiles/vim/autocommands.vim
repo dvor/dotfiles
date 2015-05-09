@@ -8,6 +8,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Resize splits when the window is resized
 autocmd VimResized * exe "normal! \<c-w>="
 
+" Mail
+autocmd FileType mail setlocal spell
+
 " Text
 autocmd FileType text setlocal textwidth=80
 
