@@ -9,5 +9,5 @@
 
 (let ((debug-on-error t))
   (require 'init-evil)
-
+  (require 'init-company)
   (require 'init-yasnippet))

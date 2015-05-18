@@ -41,6 +41,10 @@
 (setq evil-replace-state-cursor '("red" bar))
 (setq evil-operator-state-cursor '("red" hollow))
 
+
+(setq evil-want-C-u-scroll t)
+(setq evil-want-C-w-in-emacs-state t)
+
 (require-package 'evil)
 (require 'evil)
 
