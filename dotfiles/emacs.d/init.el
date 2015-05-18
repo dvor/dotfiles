@@ -1,28 +1,13 @@
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(defcustom dotemacs-cache-directory (concat user-emacs-directory ".cache/")
+  "The storage location for various persistent files."
+  :group 'dotemacs)
 
-;;; from purcell/emacs.d
-(defun require-package (package &optional min-version no-refresh)
-  "Install given PACKAGE, optionally requiring MIN-VERSION.
-If NO-REFRESH is non-nil, the available package lists will not be
-re-downloaded in order to locate PACKAGE."
-  (if (package-installed-p package min-version)
-      t
-    (if (or (assoc package package-archive-contents) no-refresh)
-        (package-install package)
-      (progn
-        (package-refresh-contents)
-        (require-package package min-version t)))))
+(add-to-list 'load-path (concat user-emacs-directory "/config"))
 
-(package-initialize)
+(require 'cl)
+(require 'init-packages)
 
-(require-package 'evil)
+(let ((debug-on-error t))
+  (require 'init-evil)
 
-(setq evil-search-module 'evil-search
-      evil-want-C-u-scroll t
-      evil-want-C-w-in-emacs-state t)
-
-(require 'evil)
-(evil-mode t)
-
+  (require 'init-yasnippet))

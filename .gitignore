@@ -7,3 +7,5 @@ config/ranger/history
 config/ranger/tagged
 
 dotfiles/emacs.d/elpa
+dotfiles/emacs.d/auto-save-list
+dotfiles/emacs.d/snippets/objc-mode/
