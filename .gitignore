@@ -9,3 +9,10 @@ config/ranger/tagged
 dotfiles/emacs.d/elpa
 dotfiles/emacs.d/auto-save-list
 dotfiles/emacs.d/snippets/objc-mode/
+
+
+config/git/git
+config/ranger/bookmarks
+config/ranger/ranger
+dotfiles/vim/.netrwhist
+dotfiles/vim/session
