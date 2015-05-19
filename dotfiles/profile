@@ -4,8 +4,10 @@ HISTSIZE=100000
 
 set -o vi
 
+alias ls='ls -G'
 alias g=git
 alias gsb="git status && echo ---- && git branch"
+alias m="mutt"
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
