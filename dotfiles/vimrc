@@ -33,6 +33,7 @@ Plugin 'flazz/vim-colorschemes'
 " Objective C
 Plugin 'dvor/cocoa.vim'
 Plugin 'tokorom/xcode-actions.vim'
+Plugin 'brow/vim-xctool'
 
 " Swift
 Plugin 'toyamarinyon/vim-swift'

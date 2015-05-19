@@ -11,6 +11,13 @@ autocmd VimResized * exe "normal! \<c-w>="
 " Text
 autocmd FileType text setlocal textwidth=80
 
+" Mail
+autocmd FileType mail setlocal textwidth=80
+autocmd FileType mail set spell
+
+" Git commit
+autocmd FileType gitcommit set spell
+
 " Objective C
 autocmd FileType objc setlocal colorcolumn=115           " Highlight 115 column
 autocmd FileType objc setlocal commentstring=//\ %s      " Comment string for vim-commentary plugin
