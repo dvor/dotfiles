@@ -9,7 +9,7 @@ alias g=git
 alias gsb="git status && echo ---- && git branch"
 alias m="mutt"
 alias e="emacs"
-alias wo="~/bin/workspace-open.sh"
+alias wo="~/dotfiles/bin/workspace-open.sh"
 alias conf='vim $( git diff --name-only --diff-filter=U | xargs )'
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
