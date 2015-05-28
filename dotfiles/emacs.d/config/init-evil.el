@@ -50,8 +50,8 @@
 
 (evil-mode t)
 
-(unless (display-graphic-p)
-  (evil-esc-mode))
+;(unless (display-graphic-p)
+  ;(evil-esc-mode))
 
 
 (require-package 'evil-leader)
