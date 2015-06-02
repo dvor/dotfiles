@@ -46,6 +46,8 @@ set noswapfile                       " No swap files
 set completeopt=menu,preview,longest " Complete options (disable preview scratch window)
 set visualbell                       " Don't beep!
 set t_vb=                            " Don't beep!
+set spell
+set spelllang=ru_ru,en_us
 
 set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:× " Show tabs and trailing spaces
 
