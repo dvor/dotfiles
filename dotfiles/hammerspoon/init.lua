@@ -84,73 +84,57 @@ end)
 hs.hotkey.bind(hyper, "H", function()
     local windowFrame = hs.window.focusedWindow():frame()
     local frame = windowLeft()
-    local text = "Left"
 
     if equalFrames(windowFrame, windowTop()) then
         frame.h = windowTop().h
-        text = "Top/" .. text
     elseif equalFrames(windowFrame, windowBottom()) then
         frame.y = windowBottom().y
         frame.h = windowBottom().h
-        text = "Bottom/" .. text
     end
 
     hs.window.focusedWindow():setFrame(frame)
-    hs.alert.show(text)
 end)
 
 hs.hotkey.bind(hyper, "L", function()
     local windowFrame = hs.window.focusedWindow():frame()
     local frame = windowRight()
-    local text = "Right"
 
     if equalFrames(windowFrame, windowTop()) then
         frame.h = windowTop().h
-        text = "Top/" .. text
     elseif equalFrames(windowFrame, windowBottom()) then
         frame.y = windowBottom().y
         frame.h = windowBottom().h
-        text = "Bottom/" .. text
     end
 
     hs.window.focusedWindow():setFrame(frame)
-    hs.alert.show(text)
 end)
 
 hs.hotkey.bind(hyper, "J", function()
     local windowFrame = hs.window.focusedWindow():frame()
     local frame = windowBottom()
-    local text = "Bottom"
 
     if equalFrames(windowFrame, windowLeft()) then
         frame.w = windowLeft().w
-        text = text .. "/Left"
     elseif equalFrames(windowFrame, windowRight()) then
         frame.x = windowRight().x
         frame.w = windowRight().w
-        text = text .. "/Right"
     end
 
     hs.window.focusedWindow():setFrame(frame)
-    hs.alert.show(text)
 end)
 
 hs.hotkey.bind(hyper, "K", function()
     local windowFrame = hs.window.focusedWindow():frame()
     local frame = windowTop()
-    local text = "Top"
 
     if equalFrames(windowFrame, windowLeft()) then
         frame.w = windowLeft().w
-        text = text .. "/Left"
     elseif equalFrames(windowFrame, windowRight()) then
         frame.x = windowRight().x
         frame.w = windowRight().w
-        text = text .. "/Right"
     end
 
     hs.window.focusedWindow():setFrame(frame)
-    hs.alert.show(text)
 end)
 
 --------------------------------------------------------------------------------
