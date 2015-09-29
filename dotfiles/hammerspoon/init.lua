@@ -63,6 +63,7 @@ bindAppWithNameToKey("Spotify",      "L")
 bindAppWithNameToKey("Thunderbird",  "M")
 bindAppWithNameToKey("VOX",          "O")
 bindAppWithNameToKey("Xcode",        "X")
+bindAppWithNameToKey("iBooks",       "B")
 bindAppWithNameToKey("iTerm",        "T")
 bindAppWithNameToKey("uTox",         "U")
 
