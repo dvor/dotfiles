@@ -40,6 +40,33 @@ hs.hotkey.bind(hyper, "delete", function()
 end)
 
 --------------------------------------------------------------------------------
+-- Application management
+
+function bindAppWithNameToKey(name, key)
+    hs.hotkey.bind({"cmd", "ctrl"}, key, function()
+        hs.application.open(name)
+    end)
+end
+
+bindAppWithNameToKey("Calendar",     "C")
+bindAppWithNameToKey("Chromium",     "D")
+bindAppWithNameToKey("Contacts",     "N")
+bindAppWithNameToKey("Dash",         "H")
+bindAppWithNameToKey("Finder",       "R")
+bindAppWithNameToKey("Firefox",      "F")
+bindAppWithNameToKey("KeePassX",     "K")
+bindAppWithNameToKey("LimeChat",     "E")
+bindAppWithNameToKey("MacVim",       "V")
+bindAppWithNameToKey("Simulator",    "I")
+bindAppWithNameToKey("Skype",        "S")
+bindAppWithNameToKey("Spotify",      "L")
+bindAppWithNameToKey("Thunderbird",  "M")
+bindAppWithNameToKey("VOX",          "O")
+bindAppWithNameToKey("Xcode",        "X")
+bindAppWithNameToKey("iTerm",        "T")
+bindAppWithNameToKey("uTox",         "U")
+
+--------------------------------------------------------------------------------
 -- Window management
 
 function equalFrames(first, second)
@@ -78,7 +105,6 @@ end
 
 hs.hotkey.bind(hyper, "F", function()
     hs.window.focusedWindow():setFrame(windowFullScreen())
-    hs.alert.show("Fullscreen")
 end)
 
 hs.hotkey.bind(hyper, "H", function()
