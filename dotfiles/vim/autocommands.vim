@@ -8,15 +8,13 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Resize splits when the window is resized
 autocmd VimResized * exe "normal! \<c-w>="
 
-" Mail
-autocmd FileType mail setlocal spell
-
 " Text
 autocmd FileType text setlocal textwidth=80
+autocmd FileType text setlocal spell
 
 " Mail
 autocmd FileType mail setlocal textwidth=80
-autocmd FileType mail set spell
+autocmd FileType mail setlocal spell
 
 " Git commit
 autocmd FileType gitcommit set spell
@@ -24,6 +22,7 @@ autocmd FileType gitcommit set spell
 " Objective C
 autocmd FileType objc setlocal colorcolumn=115           " Highlight 115 column
 autocmd FileType objc setlocal commentstring=//\ %s      " Comment string for vim-commentary plugin
+autocmd FileType objc setlocal spell
 autocmd FileType objc nnoremap <Leader>a :Alternate<CR>  " cocoa.vim plugin
 autocmd FileType objc noremap <leader>m :ListMethods<CR> " cocoa.vim plugin
 

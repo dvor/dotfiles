@@ -1,10 +1,7 @@
 set toolbars+=nonavigation
 
-nnoremap a :open<Space>duckduckgo<Space>
-nnoremap A :tabopen<Space>duckduckgo<Space>
-
-nnoremap s :open<Space>startpage<Space>
-nnoremap S :tabopen<Space>startpage<Space>
+nnoremap s :open<Space>duckduckgo<Space>
+nnoremap S :tabopen<Space>duckduckgo<Space>
 
 nnoremap <C-l> gt
 nnoremap <C-h> gT
