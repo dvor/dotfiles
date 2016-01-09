@@ -49,7 +49,7 @@ function bindAppWithNameToKey(name, key)
 end
 
 bindAppWithNameToKey("Calendar",     "C")
-bindAppWithNameToKey("Chromium",     "D")
+bindAppWithNameToKey("Google Chrome","D")
 bindAppWithNameToKey("Contacts",     "N")
 bindAppWithNameToKey("Dash",         "H")
 bindAppWithNameToKey("Finder",       "R")

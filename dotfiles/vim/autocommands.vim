@@ -28,6 +28,7 @@ autocmd FileType objc noremap <leader>m :ListMethods<CR> " cocoa.vim plugin
 
 autocmd FileType swift setlocal colorcolumn=115 "Highlight 115 column
 autocmd FileType swift setlocal commentstring=//\ %s      " Comment string for vim-commentary plugin
+autocmd FileType swift set nospell
 
 autocmd BufRead,BufNewFile *.swift setfiletype swift
 autocmd FileType swift call FileType_Swift()

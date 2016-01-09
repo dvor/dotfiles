@@ -3,5 +3,3 @@ set hintchars=hjklasdfgyuiopqwertnmzxcvb
 hi Hint::after -append font-size: 12pt;
 
 nnoremap a :emenu<Space>Message.Archive<Cr>
-
-set editor='/usr/local/bin/mvim -f'
