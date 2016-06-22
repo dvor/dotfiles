@@ -1,24 +1,37 @@
-(defcustom dotemacs-cache-directory (concat user-emacs-directory ".cache/")
-  "The storage location for various persistent files."
-  :group 'dotemacs)
+(require 'package)
 
 (add-to-list 'load-path (concat user-emacs-directory "/config"))
 
-(if (fboundp 'with-eval-after-load)
-    (defalias 'after-load 'with-eval-after-load)
-  (defmacro after-load (feature &rest body)
-    "After FEATURE is loaded, evaluate BODY."
-    (declare (indent defun))
-    `(eval-after-load ,feature
-       '(progn ,@body))))
+(setq package-enable-at-startup nil)
 
-(require 'cl)
-(require 'init-packages)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
-(let ((debug-on-error t))
-  (require 'init-evil)
-  (require 'init-slime)
-;  (require 'init-company)
-;  (require 'init-yasnippet)
-  (require 'init-auto-complete)
-  (require 'init-projectile))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(require 'init-appearance)
+(require 'init-companymode)
+(require 'init-general)
+(require 'init-helm)
+(require 'init-projectile)
+(require 'init-slime)
+(require 'init-swift-mode)
+(require 'init-smartparens)
+(require 'init-highlight-chars)
+(require 'init-dash)
+(require 'init-exec-path-from-shell)
+;(require 'init-powerline)
+
+(require 'init-evil-commentary)
+(require 'init-evil-leader)
+(require 'init-evil-numbers)
+(require 'init-evil-snipe)
+(require 'init-evil)
+
+(require 'init-nlinum-relative)
+(require 'init-vertigo)

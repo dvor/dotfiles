@@ -1,5 +1,6 @@
-(require-package 'projectile)
-(require 'projectile)
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-mode))
 
 (provide 'init-projectile)
-
