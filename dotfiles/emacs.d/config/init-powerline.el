@@ -419,10 +419,10 @@ and if not, try to get the corresponding
      ;Valid Values: alternate, arrow, arrow-fade, bar, box, brace,
    ;butt, chamfer, contour, curve, rounded, roundstub, wave, zigzag,
    ;utf-8.
-  ;(setq powerline-default-separator (if (display-graphic-p) 'wave
-  ;                                    nil))
   ;(air--powerline-default-theme))
-  (powerline-vimish-theme))
+  (powerline-vimish-theme)
+  (setq powerline-default-separator (if (display-graphic-p) 'wave
+                                     nil)))
 
 
 (use-package powerline-evil

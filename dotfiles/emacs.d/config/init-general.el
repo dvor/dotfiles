@@ -1,13 +1,14 @@
 ; disabling backup files
 (setq make-backup-files nil)
 
-(setq visible-bell t)
+(setq ring-bell-function 'ignore)
 
 (setq inhibit-splash-screen t
       inhibit-startup-echo-area-message t
       inhibit-startup-message t)
 
 (setq-default indent-tabs-mode nil)
+(setq-default c-basic-offset 4)
 
 ;; Fixing colors for powerline. See https://github.com/milkypostman/powerline/issues/54
 ;(setq ns-use-srgb-colorspace nil)
