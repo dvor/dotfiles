@@ -6,7 +6,6 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
-(set-default-font "Monaco 16")
-(custom-set-variables '(initial-frame-alist (quote ((fullscreen . maximized)))))
+(setq default-frame-alist '((font . "Monaco 16") (fullscreen . maximized)))
 
 (provide 'init-appearance)

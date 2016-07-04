@@ -25,7 +25,8 @@
 (require 'init-highlight-chars)
 (require 'init-dash)
 (require 'init-exec-path-from-shell)
-;(require 'init-powerline)
+(require 'init-ag)
+(require 'init-powerline)
 
 (require 'init-evil-commentary)
 (require 'init-evil-leader)

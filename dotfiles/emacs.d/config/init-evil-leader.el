@@ -23,7 +23,9 @@
     "h" 'help-command
     "t" 'eshell
     "a" 'projectile-find-other-file
-    "v" 'dash-at-point)
+    "v" 'dash-at-point
+    "g" 'projectile-ag
+    "x" 'my-open-xcode-at-current-file)
   (global-evil-leader-mode))
 
 (provide 'init-evil-leader)
