@@ -14,6 +14,7 @@
 
   (defun my-open-block-c-mode (id action context)
     (when (eq action 'insert)
+      (indent-according-to-mode)
       (newline)
       (newline)
       (indent-according-to-mode)

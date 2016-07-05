@@ -25,6 +25,7 @@
     "a" 'projectile-find-other-file
     "v" 'dash-at-point
     "g" 'projectile-ag
+    "u" '(lambda () (interactive) (evil-backward-word-begin) (upcase-word 1))
     "x" 'my-open-xcode-at-current-file)
   (global-evil-leader-mode))
 

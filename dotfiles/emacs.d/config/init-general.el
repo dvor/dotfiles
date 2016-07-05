@@ -15,6 +15,10 @@
 
 (global-auto-revert-mode t)
 
+(setq auto-mode-alist (cons '("\\.h$" . objc-mode) auto-mode-alist))
+
+(modify-syntax-entry ?_ "w" (standard-syntax-table))
+
 
 (defun my-open-xcode-at-current-file ()
   "Open current file in Xcode pointing on current line"
