@@ -15,7 +15,6 @@
   (package-install 'use-package))
 
 (require 'init-appearance)
-(require 'init-companymode)
 (require 'init-general)
 (require 'init-helm)
 (require 'init-projectile)
@@ -27,6 +26,8 @@
 (require 'init-exec-path-from-shell)
 (require 'init-ag)
 (require 'init-powerline)
+(require 'init-tomatinho)
+(require 'init-play-sound)
 
 (require 'init-evil-commentary)
 (require 'init-evil-leader)
@@ -36,4 +37,4 @@
 
 (require 'init-nlinum-relative)
 (require 'init-vertigo)
-
+(require 'init-companymode)

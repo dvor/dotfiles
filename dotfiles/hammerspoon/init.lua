@@ -65,7 +65,7 @@ bindAppWithNameToKey("VOX",          "O")
 bindAppWithNameToKey("Xcode",        "X")
 bindAppWithNameToKey("iBooks",       "B")
 bindAppWithNameToKey("iTerm",        "T")
-bindAppWithNameToKey("uTox",         "U")
+bindAppWithNameToKey("qTox",         "U")
 bindAppWithNameToKey("Charles",      "]")
 
 hs.hotkey.bind({"cmd", "ctrl"}, "V", function()
