@@ -28,11 +28,12 @@
 (require 'init-powerline)
 (require 'init-tomatinho)
 (require 'init-play-sound)
+(require 'init-magit)
 
 (require 'init-evil-commentary)
 (require 'init-evil-leader)
 (require 'init-evil-numbers)
-(require 'init-evil-snipe)
+(require 'init-avy)
 (require 'init-evil)
 
 (require 'init-nlinum-relative)

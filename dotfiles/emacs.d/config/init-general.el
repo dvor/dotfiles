@@ -17,7 +17,8 @@
 
 (setq auto-mode-alist (cons '("\\.h$" . objc-mode) auto-mode-alist))
 
-(modify-syntax-entry ?_ "w" (standard-syntax-table))
+(add-hook 'objc-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+(add-hook 'swift-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
 
 
 (defun my-open-xcode-at-current-file ()

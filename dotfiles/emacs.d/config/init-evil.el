@@ -27,6 +27,11 @@
   (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
   (define-key evil-normal-state-map (kbd "C-p") 'helm-projectile-find-file)
 
+  ;; Do not copy text to clipboard on visual selection
+  (fset 'evil-visual-update-x-selection 'ignore)
+
+  (modify-syntax-entry ?_ "w")
+
  ; (define-key evil-insert-state-map (kbd "TAB") 'company-complete)
   )
 

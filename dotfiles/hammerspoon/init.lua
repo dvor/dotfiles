@@ -56,7 +56,7 @@ bindAppWithNameToKey("Finder",       "R")
 bindAppWithNameToKey("Firefox",      "F")
 bindAppWithNameToKey("KeePassX",     "K")
 bindAppWithNameToKey("LimeChat",     "E")
--- bindAppWithNameToKey("Emacs",        "V")
+bindAppWithNameToKey("Emacs",        "V")
 bindAppWithNameToKey("Simulator",    "I")
 bindAppWithNameToKey("Skype",        "S")
 bindAppWithNameToKey("Spotify",      "L")
@@ -68,28 +68,11 @@ bindAppWithNameToKey("iTerm",        "T")
 bindAppWithNameToKey("qTox",         "U")
 bindAppWithNameToKey("Charles",      "]")
 
-hs.hotkey.bind({"cmd", "ctrl"}, "V", function()
-    ok,result = hs.applescript([[
-        try
-            set frameVisible to do shell script "/usr/local/bin/emacsclient -e '(<= 2 (length (visible-frame-list)))'"
-            if frameVisible is not "t" then
-                do shell script "/usr/local/bin/emacsclient -c -n"
-            end if
-        on error
-            do shell script "/usr/local/bin/emacs --daemon"
-            do shell script "/usr/local/bin/emacsclient -c -n"
-        end try
-
-        -- do shell script "/usr/local/bin/emacsclient -c -n"
-        tell application "Emacs" to activate
-    ]])
-end)
-
 --------------------------------------------------------------------------------
 -- Window management
 
 function almostEqualFrames(first, second)
-    local delta = 5.0
+    local delta = 25.0
 
     return
         math.abs(first.x - second.x) < delta and
