@@ -11,6 +11,8 @@ alias m="mutt"
 alias e="emacs"
 alias wo="~/dotfiles/bin/workspace-open.sh"
 alias conf='vim $( git diff --name-only --diff-filter=U | xargs )'
+alias sb='swift build'
+alias st='swift test'
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
