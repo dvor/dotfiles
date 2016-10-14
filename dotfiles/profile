@@ -8,9 +8,10 @@ alias ls='ls -G'
 alias g=git
 alias gsb="git status && echo ---- && git branch"
 alias m="mutt"
-alias e="emacs"
+alias e="emacs -nw"
 alias wo="~/dotfiles/bin/workspace-open.sh"
-alias conf='vim $( git diff --name-only --diff-filter=U | xargs )'
+alias conf='vi $( git diff --name-only --diff-filter=U | xargs )'
+alias emacs='emacs -nw'
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
