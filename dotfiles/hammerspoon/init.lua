@@ -1,3 +1,5 @@
+require 'pomodoor'
+
 --------------------------------------------------------------------------------
 -- Configuration
 
@@ -37,6 +39,14 @@ end)
 hs.hotkey.bind(hyper, "delete", function()
     hs.pasteboard.clearContents()
     hs.alert.show("Pasteboard cleared")
+end)
+
+--------------------------------------------------------------------------------
+-- Derived Data
+
+hs.hotkey.bind({"cmd", "shift", "ctrl", "alt"}, "delete", function()
+    result, object, descript = hs.osascript.applescript('tell application "Finder" to delete ((POSIX file "/Users/vorobyov/Library/Developer/Xcode/DerivedData") as alias)')
+    hs.alert.show("rm -rf DerivedData")
 end)
 
 --------------------------------------------------------------------------------
