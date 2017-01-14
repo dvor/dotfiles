@@ -30,8 +30,8 @@
     "e" '(lambda () (interactive) (find-file-other-window "~/.emacs.d/init.el"))
     "mb" 'magit-blame
     "ms" 'magit-status
-    "n" '(lambda () (interactive) (evil-ex-eval "cnext"))
-    "N" '(lambda () (interactive) (evil-ex-eval "cprevious"))
+    "n" 'next-error
+    "N" 'previous-error
     "x" 'my-open-xcode-at-current-file)
   (global-evil-leader-mode))
 

@@ -19,14 +19,12 @@ pom.bar = {
 pom.config = {
   enable_color_bar = true,
   work_period_sec  = 45 * 60,
-  rest_period_sec  = 10 * 60,
 }
 
 pom.var = {
   is_active        = false,
   disable_count    = 0,
-  work_count       = 0,
-  curr_active_type = "work", -- {"work", "rest"}
+  curr_active_type = "work", -- {"work"}
   time_left        = pom.config.work_period_sec,
   max_time_sec     = pom.config.work_period_sec
 }
@@ -77,7 +75,7 @@ end
 local function pom_update_display()
   local time_min = math.floor( (pom.var.time_left / 60))
   local time_sec = pom.var.time_left - (time_min * 60)
-  local str = string.format ("[%s|%02d:%02d|#%02d]", pom.var.curr_active_type, time_min, time_sec, pom.var.work_count)
+  local str = string.format ("[%s|%02d:%02d]", pom.var.curr_active_type, time_min, time_sec)
   pom_menu:setTitle(str)
 end
 
@@ -125,18 +123,10 @@ local function pom_update_time()
 
     if (pom.var.time_left <= 0 ) then
       pom_disable()
-      if pom.var.curr_active_type == "work" then
-        hs.alert.show("Work Complete!", 2)
-        pom.var.work_count        =  pom.var.work_count + 1
-        pom.var.curr_active_type  = "rest"
-        pom.var.time_left         = pom.config.rest_period_sec
-        pom.var.max_time_sec      = pom.config.rest_period_sec
-      else
-          hs.alert.show("Done resting", 2)
-          pom.var.curr_active_type  = "work"
-          pom.var.time_left         = pom.config.work_period_sec
-          pom.var.max_time_sec     = pom.config.work_period_sec
-      end
+
+      hs.alert.show("Work Complete!", 2)
+      pom.var.time_left         = pom.config.work_period_sec
+      pom.var.max_time_sec     = pom.config.work_period_sec
     end
 
     -- draw color bar indicator, if enabled.
@@ -175,11 +165,6 @@ function pom_enable()
   pom_timer:start()
 end
 
--- reset work count
--- TODO - reset automatically every day
-function pom_reset_work()
-  pom.var.work_count = 0;
-end
 -- Use examples:
 
 -- init pomodoro -- show menu immediately
