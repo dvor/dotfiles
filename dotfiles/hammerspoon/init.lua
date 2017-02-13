@@ -58,12 +58,14 @@ function bindAppWithNameToKey(name, key)
     end)
 end
 
+hs.application.enableSpotlightForNameSearches(true)
+
 bindAppWithNameToKey("Calendar",     "C")
 bindAppWithNameToKey("TorBrowser",   "D")
 bindAppWithNameToKey("Contacts",     "N")
 bindAppWithNameToKey("Dash",         "H")
 bindAppWithNameToKey("Finder",       "R")
-bindAppWithNameToKey("Firefox",      "F")
+bindAppWithNameToKey("/Applications/Firefox.app",      "F")
 bindAppWithNameToKey("KeePassX",     "K")
 bindAppWithNameToKey("LimeChat",     "E")
 bindAppWithNameToKey("Emacs",        "V")
@@ -77,6 +79,7 @@ bindAppWithNameToKey("iBooks",       "B")
 bindAppWithNameToKey("iTerm",        "T")
 bindAppWithNameToKey("qTox",         "U")
 bindAppWithNameToKey("Charles",      "]")
+bindAppWithNameToKey("Messages",     "A")
 
 --------------------------------------------------------------------------------
 -- Window management
