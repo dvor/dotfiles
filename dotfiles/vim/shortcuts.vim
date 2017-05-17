@@ -70,3 +70,4 @@ vmap <C-v> <Plug>(expand_region_shrink)
 
 nnoremap <leader>x :XcodeActionsOpenFile<CR>
 
+nnoremap <C-S-space> :VimwikiToggleListItem<CR>

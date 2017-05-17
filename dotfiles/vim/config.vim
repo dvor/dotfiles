@@ -11,9 +11,10 @@ filetype on
 filetype plugin on
 filetype indent on
 
+set nocompatible
 set wildmenu                         " Make the command-line completion better
 set autoread                         " Automatically read a file that has changes on disk
-set nonumber                         " No line numbers
+set relativenumber                   " Show relative line numbers
 set encoding=utf-8                   " Character encoding used inside Vim.
 set showcmd                          " Show (partial) command in the last line of the screen
 set scrolloff=6                      " Minimal number of screen lines to keep above and below the cursor.

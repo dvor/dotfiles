@@ -22,10 +22,10 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'kien/ctrlp.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'rking/ag.vim'
-Plugin 'jceb/vim-orgmode'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'terryma/vim-expand-region'
 Plugin 'bling/vim-airline'
+Plugin 'vimwiki/vimwiki'
 
 " Colors
 Plugin 'flazz/vim-colorschemes'

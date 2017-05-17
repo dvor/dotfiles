@@ -1,5 +1,7 @@
 export PATH="/usr/local/bin:$PATH"
 
+source ~/.git-completion.bash
+
 HISTSIZE=100000
 
 set -o vi
@@ -14,6 +16,8 @@ alias conf='vi $( git diff --name-only --diff-filter=U | xargs )'
 alias emacs='emacs -nw'
 alias sb='swift build'
 alias st='swift test'
+alias be='bundle exec'
+alias vi='vim'
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
