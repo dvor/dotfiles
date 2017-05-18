@@ -16,6 +16,8 @@ autocmd FileType text setlocal spell
 autocmd FileType mail setlocal textwidth=80
 autocmd FileType mail setlocal spell
 
+autocmd FileType vimwiki setlocal spell
+
 " Git commit
 autocmd FileType gitcommit set spell
 

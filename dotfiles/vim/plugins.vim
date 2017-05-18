@@ -28,3 +28,7 @@ let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
 let g:vimwiki_list = [{'path': '~/CloudStation/vimwiki'}]
+" Highlight checked list items with a special color
+let g:vimwiki_hl_cb_checked = 2
+
+let g:startify_list_order = ['bookmarks', 'files']

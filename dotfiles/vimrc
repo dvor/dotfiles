@@ -26,6 +26,7 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'terryma/vim-expand-region'
 Plugin 'bling/vim-airline'
 Plugin 'vimwiki/vimwiki'
+Plugin 'mhinz/vim-startify'
 
 " Colors
 Plugin 'flazz/vim-colorschemes'
@@ -47,4 +48,8 @@ source $HOME/.vim/colors.vim
 source $HOME/.vim/plugins.vim
 source $HOME/.vim/shortcuts.vim
 source $HOME/.vim/autocommands.vim
+
+if !empty(glob("$HOME/.local-vimrc"))
+    source $HOME/.local-vimrc
+endif
 
