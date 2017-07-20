@@ -71,4 +71,42 @@ vmap <C-v> <Plug>(expand_region_shrink)
 nnoremap <leader>x :XcodeActionsOpenFile<CR>
 
 nnoremap <C-S-space> :VimwikiToggleListItem<CR>
-nnoremap ,ee :VimwikiIndex<CR>:VimwikiSearch work-todo<CR>
+
+let g:kanbanBoardIsOpened = 0
+
+function KanbanOpenFile(folder, file)
+    let wikiPath = g:vimwiki_list[0]["path"]
+    execute ":e " . wikiPath . "Kanban/" . a:folder . "/" . a:file . ".wiki"
+
+    :normal j
+    :normal j
+endfunction
+
+function KanbanOpenBoard(folder)
+    let g:kanbanBoardIsOpened = 1
+    :tabnew
+
+    :only
+    :call KanbanOpenFile(a:folder, "Backlog")
+    :vsplit
+    :call KanbanOpenFile(a:folder, "InProgress")
+    :vsplit
+    :call KanbanOpenFile(a:folder, "Done")
+    :wincmd h
+
+    " Skip wrap lines
+    :noremap j j
+    :noremap k k
+endfunction
+
+function KanbanCloseBoard()
+    if g:kanbanBoardIsOpened == 1
+        let g:kanbanBoardIsOpened = 0
+        :tabclose
+    endif
+endfunction
+
+
+nnoremap ,kw :call KanbanOpenBoard("Work")<CR>
+nnoremap ,kh :call KanbanOpenBoard("Home")<CR>
+nnoremap ,kd :call KanbanCloseBoard()<CR>

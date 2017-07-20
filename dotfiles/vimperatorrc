@@ -1,5 +1,3 @@
-set toolbars+=nonavigation
-
 nnoremap s :open<Space>duckduckgo<Space>
 nnoremap S :tabopen<Space>duckduckgo<Space>
 
@@ -14,7 +12,7 @@ set hintchars=hjklasdfgyuiopqwertnmzxcvb
 
 hi Hint::after -append font-size: 12pt;
 
-nnoremap ,n gnngnlgnhgnjgnygng5gT
+nnoremap ,n gnhgnjgng2gT
 
 " Russian language keyboard mappings (UTF-8)
 map ё `
@@ -85,3 +83,5 @@ map Б <
 map Ю >
 
 
+" Temporary fix for autocomplete issue, see https://github.com/vimperator/vimperator-labs/issues/590#issuecomment-248833125
+js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"

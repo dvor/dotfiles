@@ -26,7 +26,6 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'terryma/vim-expand-region'
 Plugin 'bling/vim-airline'
 Plugin 'vimwiki/vimwiki'
-Plugin 'mhinz/vim-startify'
 
 " Colors
 Plugin 'flazz/vim-colorschemes'
@@ -37,7 +36,7 @@ Plugin 'tokorom/xcode-actions.vim'
 Plugin 'brow/vim-xctool'
 
 " Swift
-Plugin 'toyamarinyon/vim-swift'
+Plugin 'keith/swift.vim'
 
 call vundle#end()         " required
 filetype plugin indent on " required
