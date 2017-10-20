@@ -19,9 +19,6 @@ let g:airline#extensions#whitespace#enabled=0
 " remove buffergator mappings, add only buffer catalog
 let g:buffergator_suppress_keymaps=1
 
-" notes.vim
-:let g:notes_directories = ['~/Dropbox/vimnotes']
-
 " gist-vim
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
@@ -31,4 +28,5 @@ let g:vimwiki_list = [{'path': '~/CloudStation/vimwiki'}]
 " Highlight checked list items with a special color
 let g:vimwiki_hl_cb_checked = 2
 
-let g:startify_list_order = ['bookmarks', 'files']
+" neoterm
+let g:neoterm_autoinsert = 1

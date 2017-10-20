@@ -29,8 +29,8 @@ hs.alert.show("Config reloaded")
 -- Locking screen
 
 hs.hotkey.bind(hyper, "escape", function()
-    hs.caffeinate.startScreensaver()
     hs.alert.show("Locking screen")
+    hs.caffeinate.startScreensaver()
 end)
 
 --------------------------------------------------------------------------------
@@ -68,10 +68,10 @@ bindAppWithNameToKey("Finder",       "R")
 bindAppWithNameToKey("/Applications/Firefox.app",      "F")
 bindAppWithNameToKey("KeePassX",     "K")
 bindAppWithNameToKey("LimeChat",     "E")
-bindAppWithNameToKey("MacVim",       "V")
-bindAppWithNameToKey("Simulator",    "I")
+bindAppWithNameToKey("VimR",         "V")
+bindAppWithNameToKey("/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app",    "I")
 bindAppWithNameToKey("Skype",        "S")
-bindAppWithNameToKey("Spotify",      "L")
+bindAppWithNameToKey("iTunes",       "L")
 bindAppWithNameToKey("Thunderbird",  "M")
 bindAppWithNameToKey("VOX",          "O")
 bindAppWithNameToKey("Xcode",        "X")
@@ -80,6 +80,7 @@ bindAppWithNameToKey("iTerm",        "T")
 bindAppWithNameToKey("uTox",         "U")
 bindAppWithNameToKey("Charles",      "]")
 bindAppWithNameToKey("Messages",     "A")
+bindAppWithNameToKey("Messenger",    ";")
 
 --------------------------------------------------------------------------------
 -- Window management

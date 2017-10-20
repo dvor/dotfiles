@@ -18,7 +18,7 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'justinmk/vim-sneak'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'rking/ag.vim'
@@ -26,9 +26,10 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'terryma/vim-expand-region'
 Plugin 'bling/vim-airline'
 Plugin 'vimwiki/vimwiki'
+Plugin 'kassio/neoterm'
 
 " Colors
-Plugin 'flazz/vim-colorschemes'
+Plugin 'iCyMind/NeoSolarized'
 
 " Objective C
 Plugin 'dvor/cocoa.vim'

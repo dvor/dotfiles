@@ -17,7 +17,7 @@ alias emacs='emacs -nw'
 alias sb='swift build'
 alias st='swift test'
 alias be='bundle exec'
-alias vi='vim'
+alias vi='nvim'
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
