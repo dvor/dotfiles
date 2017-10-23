@@ -14,6 +14,7 @@ filetype indent on
 set nocompatible
 set wildmenu                         " Make the command-line completion better
 set autoread                         " Automatically read a file that has changes on disk
+au FocusGained * :checktime          " Updating opened file when gained focus. See https://github.com/neovim/neovim/issues/1936#issuecomment-309311829
 set relativenumber                   " Show relative line numbers
 set encoding=utf-8                   " Character encoding used inside Vim.
 set showcmd                          " Show (partial) command in the last line of the screen
