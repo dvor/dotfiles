@@ -27,6 +27,8 @@ let g:gist_post_private = 1
 let g:vimwiki_list = [{'path': '~/CloudStation/vimwiki'}]
 " Highlight checked list items with a special color
 let g:vimwiki_hl_cb_checked = 2
+" Disable tab mapping to fix autocompletion
+let g:vimwiki_table_mappings = 0
 
 " neoterm
 let g:neoterm_autoinsert = 1
