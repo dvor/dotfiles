@@ -28,3 +28,6 @@ complete -o default -o nospace -F _git g
 
 # No history for jrnl
 HISTIGNORE="jrnl *"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

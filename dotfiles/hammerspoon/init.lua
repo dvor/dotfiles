@@ -70,7 +70,7 @@ bindAppWithNameToKey("KeePassX",     "K")
 bindAppWithNameToKey("LimeChat",     "E")
 bindAppWithNameToKey("VimR",         "V")
 bindAppWithNameToKey("/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app",    "I")
-bindAppWithNameToKey("Skype",        "S")
+bindAppWithNameToKey("Slack",        "S")
 bindAppWithNameToKey("iTunes",       "L")
 bindAppWithNameToKey("Thunderbird",  "M")
 bindAppWithNameToKey("VOX",          "O")
@@ -80,7 +80,7 @@ bindAppWithNameToKey("iTerm",        "T")
 bindAppWithNameToKey("uTox",         "U")
 bindAppWithNameToKey("Charles",      "]")
 bindAppWithNameToKey("Messages",     "A")
-bindAppWithNameToKey("Messenger",    ";")
+bindAppWithNameToKey("Telegram",     "G")
 
 --------------------------------------------------------------------------------
 -- Window management
