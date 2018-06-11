@@ -24,11 +24,14 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
-let g:vimwiki_list = [{'path': '~/CloudStation/vimwiki'}]
+let g:vimwiki_list = [{'path': '~/CloudStation/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 " Highlight checked list items with a special color
 let g:vimwiki_hl_cb_checked = 2
 " Disable tab mapping to fix autocompletion
 let g:vimwiki_table_mappings = 0
 
+" let g:vimwiki_folding = 'expr'
+
 " neoterm
 let g:neoterm_autoinsert = 1
+
