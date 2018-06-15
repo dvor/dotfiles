@@ -48,37 +48,56 @@ hs.hotkey.bind({"cmd", "shift", "ctrl", "alt"}, "delete", function()
 end)
 
 --------------------------------------------------------------------------------
+-- DND mode
+
+local dndModeOn = false
+
+hs.urlevent.bind("dnd", function()
+    dndModeOn = not dndModeOn
+
+    if dndModeOn then
+        hs.alert.show("Do not disturb ON")
+    else
+        hs.alert.show("Do not disturb OFF")
+    end
+end)
+
+--------------------------------------------------------------------------------
 -- Application management
 
-function bindAppWithNameToKey(name, key)
+function bindAppWithNameToKey(dependsOnDnd, name, key)
     hs.hotkey.bind({"cmd", "ctrl"}, key, function()
+        if dependsOnDnd and dndModeOn then
+            return
+        end
         hs.application.open(name)
     end)
 end
 
 hs.application.enableSpotlightForNameSearches(true)
 
-bindAppWithNameToKey("Calendar",     "C")
-bindAppWithNameToKey("TorBrowser",   "D")
-bindAppWithNameToKey("Contacts",     "N")
-bindAppWithNameToKey("Dash",         "H")
-bindAppWithNameToKey("Finder",       "R")
-bindAppWithNameToKey("/Applications/Firefox.app",      "F")
-bindAppWithNameToKey("KeePassX",     "K")
-bindAppWithNameToKey("LimeChat",     "E")
-bindAppWithNameToKey("VimR",         "V")
-bindAppWithNameToKey("/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app",    "I")
-bindAppWithNameToKey("Slack",        "S")
-bindAppWithNameToKey("iTunes",       "L")
-bindAppWithNameToKey("Thunderbird",  "M")
-bindAppWithNameToKey("VOX",          "O")
-bindAppWithNameToKey("Xcode",        "X")
-bindAppWithNameToKey("iBooks",       "B")
-bindAppWithNameToKey("iTerm",        "T")
-bindAppWithNameToKey("uTox",         "U")
-bindAppWithNameToKey("Charles",      "]")
-bindAppWithNameToKey("Messages",     "A")
-bindAppWithNameToKey("Telegram",     "G")
+bindAppWithNameToKey(false, "Calendar",     "C")
+bindAppWithNameToKey(false, "TorBrowser",   "D")
+bindAppWithNameToKey(false, "Contacts",     "N")
+bindAppWithNameToKey(false, "Dash",         "H")
+bindAppWithNameToKey(false, "Finder",       "R")
+bindAppWithNameToKey(false, "/Applications/Firefox.app",      "F")
+bindAppWithNameToKey(false, "KeePassX",     "K")
+bindAppWithNameToKey(false, "MacVim",       "V")
+bindAppWithNameToKey(false, "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app",    "I")
+bindAppWithNameToKey(false, "iTunes",       "L")
+bindAppWithNameToKey(false, "VOX",          "O")
+bindAppWithNameToKey(false, "Xcode",        "X")
+bindAppWithNameToKey(false, "iBooks",       "B")
+bindAppWithNameToKey(false, "iTerm",        "T")
+bindAppWithNameToKey(false, "Charles",      "]")
+
+bindAppWithNameToKey(true,  "Thunderbird",  "M")
+bindAppWithNameToKey(true,  "LimeChat",     "E")
+bindAppWithNameToKey(true,  "Slack",        "S")
+bindAppWithNameToKey(true,  "uTox",         "U")
+bindAppWithNameToKey(true,  "Messages",     "A")
+bindAppWithNameToKey(true,  "Telegram",     "G")
 
 --------------------------------------------------------------------------------
 -- Window management
