@@ -48,8 +48,23 @@ hs.urlevent.bind("dnd", function()
     dndModeOn = not dndModeOn
 
     if dndModeOn then
+        hs.osascript.applescript([[
+        do shell script "
+            defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -boolean true
+            defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturbDate -date \"`date -u +\"%Y-%m-%d %H:%M:%S +0000\"`\"
+            killall NotificationCenter
+        "
+        ]])
+
         hs.alert.show("Do not disturb ON")
     else
+        hs.osascript.applescript([[
+        do shell script "
+            defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -boolean false
+            killall NotificationCenter
+        "
+        ]])
+
         hs.alert.show("Do not disturb OFF")
     end
 end)

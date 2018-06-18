@@ -13,7 +13,7 @@ autocmd FileType text setlocal textwidth=80
 autocmd FileType text setlocal spell
 
 " Mail
-autocmd FileType mail setlocal textwidth=80
+autocmd FileType mail setlocal textwidth=0
 autocmd FileType mail setlocal spell
 
 autocmd FileType vimwiki setlocal spell
