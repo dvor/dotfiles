@@ -19,6 +19,13 @@ alias st='swift test'
 alias be='bundle exec'
 alias vi='nvim'
 
+ldg() {
+    point=/Volumes/ledger
+    hdiutil mount CloudStation/Crypted/ledger.dmg -mountpoint $point
+    vi $point/dvor.ldg
+    hdiutil unmount $point
+}
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi

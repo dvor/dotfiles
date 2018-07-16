@@ -27,6 +27,7 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'bling/vim-airline'
 Plugin 'vimwiki/vimwiki'
 Plugin 'kassio/neoterm'
+Plugin 'ledger/vim-ledger'
 
 " Colors
 Plugin 'iCyMind/NeoSolarized'

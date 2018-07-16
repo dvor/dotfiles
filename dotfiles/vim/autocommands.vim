@@ -43,3 +43,5 @@ function! FileType_Swift()
 endfunction
 
 command! Uncrustify :silent !uncrustify -c uncrustify.cfg -l OC+ --no-backup "%"
+
+autocmd BufWritePost *.ldg,*.ledger 1,$LedgerAlign

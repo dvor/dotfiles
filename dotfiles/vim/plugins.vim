@@ -35,3 +35,5 @@ let g:vimwiki_table_mappings = 0
 " neoterm
 let g:neoterm_autoinsert = 1
 
+" ledger
+let g:ledger_default_commodity = '€'

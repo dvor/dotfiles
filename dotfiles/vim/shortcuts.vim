@@ -83,3 +83,7 @@ tnoremap <C-h> <C-\><C-n><C-W>h
 tnoremap <C-j> <C-\><C-n><C-W>j
 tnoremap <C-k> <C-\><C-n><C-W>k
 tnoremap <C-l> <C-\><C-n><C-W>l
+
+inoremap <silent> <buffer> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
+vnoremap <silent> <buffer> <Tab> :LedgerAlign<CR>
+
