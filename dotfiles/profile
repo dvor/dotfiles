@@ -22,7 +22,7 @@ alias vi='nvim'
 ldg() {
     point=/Volumes/ledger
     hdiutil mount CloudStation/Crypted/ledger.dmg -mountpoint $point
-    vi $point/dvor.ldg
+    vi "+normal G" $point/dvor.ldg
     hdiutil unmount $point
 }
 
