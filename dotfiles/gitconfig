@@ -1,5 +1,5 @@
 [core]
-    editor = vim
+    editor = nvim
 [user]
     name = Dmytro Vorobiov
     email = d@dvor.me

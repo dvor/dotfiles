@@ -1,0 +1,18 @@
+# new entry from debit card
+snippet ed
+	`system("date +%Y.%m.")`${1:`system("date -v -1d +%d")`} ${2}
+		expenses:${3}    €
+		assets:debit card
+	
+# new entry from paypal
+snippet ep
+	`system("date +%Y.%m.")`${1:`system("date -v -1d +%d")`} ${2}
+		expenses:${3}    €
+		liabilities:paypal
+	
+# new entry from mastercard
+snippet em
+	`system("date +%Y.%m.")`${1:`system("date -v -1d +%d")`} ${2}
+		expenses:${3}    €
+		liabilities:mastercard
+	
