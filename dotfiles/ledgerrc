@@ -1,1 +1,4 @@
---file /Volumes/ledger/dvor.ldg
+--file /Volumes/ledger/main.ldg
+--price-db /Volumes/ledger/prices
+--pedantic
+--exchange €

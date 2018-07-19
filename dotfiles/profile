@@ -20,10 +20,26 @@ alias be='bundle exec'
 alias vi='nvim'
 
 ldg() {
-    point=/Volumes/ledger
-    hdiutil mount CloudStation/Crypted/ledger.sparsebundle -mountpoint $point
-    vi "+normal G" $point/dvor.ldg
-    hdiutil unmount $point
+    # Ledger.sparsebundle is stored in the archive because CloudStation has
+    # lots of issues when syncing .sparsebundle - generally it never works.
+    archive=~/CloudStation/Crypted/ledger.tar.gz
+    mount=/Volumes/ledger
+    temp=~/Desktop/
+    bundle=ledger.sparsebundle
+
+    pushd $temp
+    tar -zxvf $archive
+    hdiutil mount $bundle -mountpoint $mount
+
+    pushd $mount
+    ./run.sh
+    popd
+
+    hdiutil unmount $mount
+    tar -zcvf $archive $bundle
+    rm -r $bundle
+
+    popd
 }
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
