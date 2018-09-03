@@ -40,6 +40,9 @@ Plugin 'brow/vim-xctool'
 " Swift
 Plugin 'keith/swift.vim'
 
+" Go
+Plugin 'fatih/vim-go'
+
 call vundle#end()         " required
 filetype plugin indent on " required
 
