@@ -51,7 +51,7 @@ endfunction
 
 command! Uncrustify :silent !uncrustify -c uncrustify.cfg -l OC+ --no-backup "%"
 
-autocmd BufWritePost *.ldg,*.ledger 1,$LedgerAlign
+" autocmd BufWritePost *.ldg,*.ledger 1,$LedgerAlign
 
 autocmd FileType ledger inoremap <silent> <buffer> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
 autocmd FileType ledger vnoremap <silent> <buffer> <Tab> :LedgerAlign<CR>
