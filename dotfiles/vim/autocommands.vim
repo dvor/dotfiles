@@ -35,6 +35,13 @@ autocmd FileType swift set nospell
 autocmd BufRead,BufNewFile *.swift setfiletype swift
 autocmd FileType swift call FileType_Swift()
 
+" Go
+autocmd FileType go set nolist
+
+" Podfiles and podspecs
+autocmd BufNewFile,BufRead *.podspec set filetype=ruby
+autocmd BufNewFile,BufRead Podfile set filetype=ruby
+
 function! FileType_Swift()
     if exists("b:did_ftswift") | return | endif
     let b:did_ftswift = 1

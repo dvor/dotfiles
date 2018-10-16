@@ -21,6 +21,8 @@ alias sb='swift build'
 alias st='swift test'
 alias be='bundle exec'
 alias vi='nvim'
+alias psshm='pssh -H "mini0 mini1 mini2 mini3 mini4 mini5 mini6 mini7" -i'
+alias ssh='~/dotfiles/bin/color-ssh.sh'
 
 ldg() {
     # Ledger.sparsebundle is stored in the archive because CloudStation has
