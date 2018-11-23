@@ -68,7 +68,8 @@ nnoremap <leader>j :%!python -m json.tool<CR>
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
-nnoremap <leader>x :XcodeActionsOpenFile<CR>
+nnoremap <leader>xx :XcodeActionsOpenFile<CR>
+nnoremap <leader>xd :!open $(dirname %)<CR>
 
 nnoremap <C-S-space> :VimwikiToggleListItem<CR>
 
