@@ -32,6 +32,8 @@ echo "cd $configDir"
 echo ""
 cd $configDir
 
+mkdir ~/.config
+
 for file in *; do
     echo "Backing up .config/$file to $backupDir/config/$file"
     mv ~/.config/$file $backupDir/config/

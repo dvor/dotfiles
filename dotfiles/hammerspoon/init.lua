@@ -84,7 +84,7 @@ end
 hs.application.enableSpotlightForNameSearches(true)
 
 bindAppWithNameToKey(false, "Calendar",     "C")
-bindAppWithNameToKey(false, "TorBrowser",   "D")
+bindAppWithNameToKey(false, "Tor Browser",   "D")
 bindAppWithNameToKey(false, "Contacts",     "N")
 bindAppWithNameToKey(false, "Dash",         "H")
 bindAppWithNameToKey(false, "Finder",       "R")
@@ -95,14 +95,13 @@ bindAppWithNameToKey(false, "/Applications/Xcode.app/Contents/Developer/Applicat
 bindAppWithNameToKey(false, "Spotify",      "L")
 bindAppWithNameToKey(false, "VOX",          "O")
 bindAppWithNameToKey(false, "Xcode",        "X")
-bindAppWithNameToKey(false, "iBooks",       "B")
+bindAppWithNameToKey(false, "Kindle",       "B")
 bindAppWithNameToKey(false, "iTerm",        "T")
 bindAppWithNameToKey(false, "Charles",      "]")
 
 bindAppWithNameToKey(true,  "Thunderbird",  "M")
 bindAppWithNameToKey(true,  "LimeChat",     "E")
 bindAppWithNameToKey(true,  "Slack",        "S")
-bindAppWithNameToKey(true,  "uTox",         "U")
 bindAppWithNameToKey(true,  "Messages",     "A")
 bindAppWithNameToKey(true,  "Telegram",     "G")
 
