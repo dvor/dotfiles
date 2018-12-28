@@ -1,18 +1,19 @@
 .DS_Store
 
-dotfiles/vim/bundle/
-dotfiles/vim/vim
-
+config/git/git
+config/nvim/nvim
+config/ranger/bookmarks
 config/ranger/history
+config/ranger/ranger
 config/ranger/tagged
 
-dotfiles/emacs.d/elpa
 dotfiles/emacs.d/auto-save-list
+dotfiles/emacs.d/elpa
+dotfiles/emacs.d/emacs.d
 dotfiles/emacs.d/snippets/objc-mode/
-
-
-config/git/git
-config/ranger/bookmarks
-config/ranger/ranger
+dotfiles/hammerspoon/hammerspoon
 dotfiles/vim/.netrwhist
+dotfiles/vim/autoload/
+dotfiles/vim/plugged/
 dotfiles/vim/session
+dotfiles/vim/vim

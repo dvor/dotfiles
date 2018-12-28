@@ -1,50 +1,57 @@
 set nocompatible " be iMproved
-filetype off     " required
 
-" Setup Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Install vim-plug if it is not installed yet.
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-Plugin 'gmarik/vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " tpope utilities
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-speeddating'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
 
 " Workflow
-Plugin 'Townk/vim-autoclose'
-Plugin 'ervandew/supertab'
-Plugin 'godlygeek/tabular'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'kien/ctrlp.vim'
-Plugin 'msanders/snipmate.vim'
-Plugin 'rking/ag.vim'
-Plugin 'vim-scripts/IndexedSearch'
-Plugin 'terryma/vim-expand-region'
-Plugin 'bling/vim-airline'
-Plugin 'vimwiki/vimwiki'
-Plugin 'kassio/neoterm'
-Plugin 'ledger/vim-ledger'
+Plug 'Townk/vim-autoclose'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'easymotion/vim-easymotion'
+Plug 'kien/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'terryma/vim-expand-region'
+Plug 'bling/vim-airline'
+Plug 'vimwiki/vimwiki'
+Plug 'kassio/neoterm'
+Plug 'ledger/vim-ledger'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Snipmate & dependencies
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
 
 " Colors
-Plugin 'iCyMind/NeoSolarized'
+Plug 'iCyMind/NeoSolarized'
 
 " Objective C
-Plugin 'dvor/cocoa.vim'
-Plugin 'tokorom/xcode-actions.vim'
-Plugin 'brow/vim-xctool'
+Plug 'dvor/cocoa.vim'
+Plug 'tokorom/xcode-actions.vim'
+Plug 'brow/vim-xctool'
 
 " Swift
-Plugin 'keith/swift.vim'
+Plug 'keith/swift.vim'
 
 " Go
-Plugin 'fatih/vim-go'
+Plug 'fatih/vim-go'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
-call vundle#end()         " required
-filetype plugin indent on " required
+call plug#end()
 
 
 source $HOME/.vim/config.vim
