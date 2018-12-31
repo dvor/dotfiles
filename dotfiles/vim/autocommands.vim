@@ -7,6 +7,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " Resize splits when the window is resized
 autocmd VimResized * exe "normal! \<c-w>="
+autocmd VimResized * redraw!
 
 " Text
 autocmd FileType text setlocal textwidth=80
@@ -41,6 +42,7 @@ autocmd FileType go set nolist
 " Podfiles and podspecs
 autocmd BufNewFile,BufRead *.podspec set filetype=ruby
 autocmd BufNewFile,BufRead Podfile set filetype=ruby
+autocmd BufNewFile,BufRead Fastfile set filetype=ruby
 
 function! FileType_Swift()
     if exists("b:did_ftswift") | return | endif
