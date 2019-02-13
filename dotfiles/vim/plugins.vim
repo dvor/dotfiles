@@ -39,5 +39,5 @@ let g:neoterm_autoinsert = 1
 let g:ledger_default_commodity = '€'
 
 " deoplete
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('auto_complete_delay', 1000)
