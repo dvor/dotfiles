@@ -40,6 +40,16 @@ hs.hotkey.bind(hyper, "delete", function()
 end)
 
 --------------------------------------------------------------------------------
+-- Showing notification
+--
+-- Usage:
+-- notify?message="Message to show"
+
+hs.urlevent.bind("notify", function(event, params)
+    hs.alert.show(params["message"])
+end)
+
+--------------------------------------------------------------------------------
 -- DND mode
 
 local dndModeOn = false
