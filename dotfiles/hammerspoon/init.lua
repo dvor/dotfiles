@@ -53,6 +53,7 @@ end)
 -- DND mode
 
 local dndModeOn = false
+local dndKilledApps = {}
 
 hs.urlevent.bind("dnd", function()
     dndModeOn = not dndModeOn
@@ -66,6 +67,17 @@ hs.urlevent.bind("dnd", function()
         "
         ]])
 
+        local apps = {"Thunderbird", "Slack", "Messages"}
+
+        for i, name in pairs(apps) do
+            local app = hs.appfinder.appFromName(name)
+
+            if app and app:isRunning() then
+                table.insert(dndKilledApps, name)
+                hs.application.kill(app)
+            end
+        end
+
         hs.alert.show("Do not disturb ON")
     else
         hs.osascript.applescript([[
@@ -74,6 +86,12 @@ hs.urlevent.bind("dnd", function()
             killall NotificationCenter
         "
         ]])
+
+        -- Restore killed apps
+        for i, name in pairs(dndKilledApps) do
+            hs.application.open(name)
+        end
+        dndKilledApps = {}
 
         hs.alert.show("Do not disturb OFF")
     end
@@ -101,10 +119,8 @@ bindAppWithNameToKey(false, "Finder",       "R")
 bindAppWithNameToKey(false, "/Applications/Firefox.app",      "F")
 bindAppWithNameToKey(false, "KeePassX",     "K")
 bindAppWithNameToKey(false, "MacVim",       "V")
-bindAppWithNameToKey(false, "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app",    "I")
 bindAppWithNameToKey(false, "Spotify",      "L")
-bindAppWithNameToKey(false, "VOX",          "O")
-bindAppWithNameToKey(false, "Xcode",        "X")
+bindAppWithNameToKey(false, "VLC",          "O")
 bindAppWithNameToKey(false, "Kindle",       "B")
 bindAppWithNameToKey(false, "iTerm",        "T")
 bindAppWithNameToKey(false, "Charles",      "]")
@@ -114,6 +130,9 @@ bindAppWithNameToKey(true,  "LimeChat",     "E")
 bindAppWithNameToKey(true,  "Slack",        "S")
 bindAppWithNameToKey(true,  "Messages",     "A")
 bindAppWithNameToKey(true,  "Telegram",     "G")
+
+bindAppWithNameToKey(false, "/Applications/Xcode_11.app",        "X")
+bindAppWithNameToKey(false, "/Applications/Xcode_11.app/Contents/Developer/Applications/Simulator.app",    "I")
 
 --------------------------------------------------------------------------------
 -- Window management
