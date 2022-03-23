@@ -41,3 +41,7 @@ let g:ledger_default_commodity = '€'
 " deoplete
 "let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('auto_complete_delay', 1000)
+
+" snipmate
+let g:snipMate = { 'snippet_version' : 0 }
+

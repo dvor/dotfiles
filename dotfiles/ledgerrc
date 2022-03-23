@@ -1,4 +1,3 @@
---file /Volumes/ledger/main.ldg
---price-db /Volumes/ledger/prices
+--file /Users/vorobyov/Workspace/finance/crypted/main.ldg
+--price-db /Users/vorobyov/Workspace/finance/crypted/prices
 --pedantic
---exchange €

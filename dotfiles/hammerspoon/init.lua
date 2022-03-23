@@ -53,46 +53,13 @@ end)
 -- DND mode
 
 local dndModeOn = false
-local dndKilledApps = {}
 
 hs.urlevent.bind("dnd", function()
     dndModeOn = not dndModeOn
 
     if dndModeOn then
-        hs.osascript.applescript([[
-        do shell script "
-            defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -boolean true
-            defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturbDate -date \"`date -u +\"%Y-%m-%d %H:%M:%S +0000\"`\"
-            killall NotificationCenter
-        "
-        ]])
-
-        local apps = {"Thunderbird", "Slack", "Messages"}
-
-        for i, name in pairs(apps) do
-            local app = hs.appfinder.appFromName(name)
-
-            if app and app:isRunning() then
-                table.insert(dndKilledApps, name)
-                hs.application.kill(app)
-            end
-        end
-
         hs.alert.show("Do not disturb ON")
     else
-        hs.osascript.applescript([[
-        do shell script "
-            defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -boolean false
-            killall NotificationCenter
-        "
-        ]])
-
-        -- Restore killed apps
-        for i, name in pairs(dndKilledApps) do
-            hs.application.open(name)
-        end
-        dndKilledApps = {}
-
         hs.alert.show("Do not disturb OFF")
     end
 end)
@@ -109,30 +76,38 @@ function bindAppWithNameToKey(dependsOnDnd, name, key)
     end)
 end
 
+function bindAppleScriptToKey(script, key)
+    hs.hotkey.bind({"cmd", "ctrl"}, key, function()
+        hs.osascript.applescript(script)
+    end)
+end
+
 hs.application.enableSpotlightForNameSearches(true)
 
 bindAppWithNameToKey(false, "Calendar",     "C")
 bindAppWithNameToKey(false, "Tor Browser",   "D")
-bindAppWithNameToKey(false, "Contacts",     "N")
+bindAppWithNameToKey(false, "Standard Notes",     "N")
 bindAppWithNameToKey(false, "Dash",         "H")
-bindAppWithNameToKey(false, "Finder",       "R")
 bindAppWithNameToKey(false, "/Applications/Firefox.app",      "F")
 bindAppWithNameToKey(false, "KeePassX",     "K")
 bindAppWithNameToKey(false, "MacVim",       "V")
-bindAppWithNameToKey(false, "Spotify",      "L")
-bindAppWithNameToKey(false, "VLC",          "O")
 bindAppWithNameToKey(false, "Kindle",       "B")
 bindAppWithNameToKey(false, "iTerm",        "T")
 bindAppWithNameToKey(false, "Charles",      "]")
+bindAppWithNameToKey(false, "Trello",      "J")
+bindAppWithNameToKey(false, "Miro",      "E")
+bindAppWithNameToKey(false, "DeepL",      "L")
 
-bindAppWithNameToKey(true,  "Thunderbird",  "M")
-bindAppWithNameToKey(true,  "LimeChat",     "E")
+bindAppWithNameToKey(true,  "Microsoft Outlook",  "M")
+bindAppWithNameToKey(true,  "Microsoft Teams",     "R")
 bindAppWithNameToKey(true,  "Slack",        "S")
-bindAppWithNameToKey(true,  "Messages",     "A")
-bindAppWithNameToKey(true,  "Telegram",     "G")
+bindAppWithNameToKey(false,  "Messages",     "A")
+bindAppWithNameToKey(false,  "Telegram",     "G")
 
-bindAppWithNameToKey(false, "/Applications/Xcode_11.app",        "X")
-bindAppWithNameToKey(false, "/Applications/Xcode_11.app/Contents/Developer/Applications/Simulator.app",    "I")
+bindAppWithNameToKey(false, "/Applications/Xcode_13.3.app",        "X")
+bindAppWithNameToKey(false, "/Applications/Xcode_13.3.app/Contents/Developer/Applications/Simulator.app",    "I")
+
+bindAppleScriptToKey("tell application \"Flow\" \nlaunch \nshow \n end tell", "O")
 
 --------------------------------------------------------------------------------
 -- Window management

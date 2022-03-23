@@ -51,6 +51,9 @@ Plug 'keith/swift.vim'
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 
+" Kotlin
+Plug 'udalov/kotlin-vim'
+
 call plug#end()
 
 
