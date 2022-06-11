@@ -33,6 +33,10 @@ setopt promptsubst
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle chrissicool/zsh-256color
 antigen theme akz92/clean
 
 antigen apply
+
+# Autosuggestion binding
+bindkey '^E' autosuggest-accept
