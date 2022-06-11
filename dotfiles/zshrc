@@ -1,0 +1,24 @@
+# Homebrew
+export PATH="/usr/local/bin:$PATH"
+
+# Ruby
+export PATH="~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+set -o vi
+
+alias ls='ls -G'
+alias g=git
+alias gsb="git status && echo ---- && git branch"
+alias wo="~/dotfiles/bin/workspace-open.sh"
+alias be='bundle exec'
+alias vi='nvim'
+alias ssh='~/dotfiles/bin/color-ssh.sh'
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi

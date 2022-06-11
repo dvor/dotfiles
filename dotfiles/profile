@@ -1,6 +1,3 @@
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
 export PATH="/usr/local/bin:$PATH"
 
 source ~/.git-completion.bash
@@ -12,40 +9,10 @@ set -o vi
 alias ls='ls -G'
 alias g=git
 alias gsb="git status && echo ---- && git branch"
-alias m="neomutt"
-alias e="emacs -nw"
 alias wo="~/dotfiles/bin/workspace-open.sh"
-alias conf='vi $( git diff --name-only --diff-filter=U | xargs )'
-alias emacs='emacs -nw'
-alias sb='swift build'
-alias st='swift test'
 alias be='bundle exec'
 alias vi='nvim'
-alias psshm='pssh -H "mini0 mini1 mini2 mini3 mini4 mini5 mini6 mini7 mini8 mini9 mini10 mini11" -i'
 alias ssh='~/dotfiles/bin/color-ssh.sh'
-
-ldg() {
-    # Ledger.sparsebundle is stored in the archive because CloudStation has
-    # lots of issues when syncing .sparsebundle - generally it never works.
-    archive=~/CloudStation/Crypted/ledger.tar.gz
-    mount=/Volumes/ledger
-    temp=~/Desktop/
-    bundle=ledger.sparsebundle
-
-    pushd $temp
-    tar -zxvf $archive
-    hdiutil mount $bundle -mountpoint $mount
-
-    pushd $mount
-    ./run.sh
-    popd
-
-    hdiutil unmount $mount
-    tar -zcvf $archive $bundle
-    rm -r $bundle
-
-    popd
-}
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
@@ -54,9 +21,7 @@ fi
 # autocompletion for g alias
 complete -o default -o nospace -F _git g
 
-# No history for jrnl
-HISTIGNORE="jrnl *"
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
+export PATH="~/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
