@@ -1,4 +1,24 @@
 --------------------------------------------------------------------------------
+-- Settings
+SETTINGS_KEY_DND_MODE = "DND_MODE"
+
+settings = {}
+
+function settings:getDndMode()
+    value = hs.settings.get(SETTINGS_KEY_DND_MODE)
+
+    if value == nil then
+        value = false
+    end
+
+    return value
+end
+
+function settings:setDndMode(mode)
+    hs.settings.set(SETTINGS_KEY_DND_MODE, mode)
+end
+
+--------------------------------------------------------------------------------
 -- Configuration
 
 hs.window.animationDuration = 0
@@ -64,12 +84,11 @@ end)
 --------------------------------------------------------------------------------
 -- DND mode
 
-local dndModeOn = false
-
 hs.urlevent.bind("dnd", function()
-    dndModeOn = not dndModeOn
+    mode = not settings:getDndMode()
+    settings:setDndMode(mode)
 
-    if dndModeOn then
+    if mode then
         hs.alert.show("Do not disturb ON")
     else
         hs.alert.show("Do not disturb OFF")
@@ -81,7 +100,7 @@ end)
 
 function bindAppWithNameToKey(dependsOnDnd, name, key)
     hs.hotkey.bind({"cmd", "ctrl"}, key, function()
-        if dependsOnDnd and dndModeOn then
+        if dependsOnDnd and settings:getDndMode() then
             return
         end
         hs.application.open(name)
