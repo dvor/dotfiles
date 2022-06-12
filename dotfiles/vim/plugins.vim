@@ -44,4 +44,3 @@ call deoplete#custom#option('auto_complete_delay', 1000)
 
 " snipmate
 let g:snipMate = { 'snippet_version' : 0 }
-
