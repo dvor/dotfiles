@@ -24,19 +24,29 @@ then
 fi
 
 # ----------------------------------------
-# Antigen plugin management
-source /opt/homebrew/share/antigen/antigen.zsh
-
+# Theme
 # Enable colors & fix issue with parsing PROMPT
 autoload -U colors && colors
 setopt promptsubst
 
+precmd () {
+  if [ "$ZSH_CLEAN_PATH_STYLE" = "1" ]; then
+    PROMPT="%F{blue}%c%{$reset_color%} "
+  else
+    PROMPT="%F{blue}%~%{$reset_color%} "
+  fi
+}
+
+# ----------------------------------------
+# Antigen plugin management
+source /opt/homebrew/share/antigen/antigen.zsh
+
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle chrissicool/zsh-256color
-antigen theme akz92/clean
 
 antigen apply
 
 # Autosuggestion binding
 bindkey '^E' autosuggest-accept
+eval "$(rbenv init -)"
